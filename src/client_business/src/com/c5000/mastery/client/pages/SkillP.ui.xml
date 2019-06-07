@@ -1,0 +1,33 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:a='urn:import:com.c5000.mastery.client.views'>
+    <ui:style>
+
+        .assignmentsHeader {
+            font-size: 14pt;
+        }
+
+        .assignments {
+            padding-top: 10px;
+        }
+
+        .indented {
+            margin-left: 20px;
+        }
+
+    </ui:style>
+    <g:HTMLPanel>
+        <g:HTMLPanel ui:field="notFound" visible="false">
+            The requested category does not exist.
+        </g:HTMLPanel>
+        <g:HTMLPanel ui:field="found" visible="false">
+            <g:HTMLPanel ui:field="skillPanel"/>
+            <g:HTMLPanel styleName="{style.assignments}">
+                <g:Label text="Assignments:" styleName="{style.assignmentsHeader}"/>
+                <br/>
+                <a:LazyListV ui:field="assignments" styleName="{style.indented}" visible="false"/>
+            </g:HTMLPanel>
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder> 

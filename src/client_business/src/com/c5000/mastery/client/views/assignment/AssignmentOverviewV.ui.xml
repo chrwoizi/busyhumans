@@ -1,0 +1,111 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:p='urn:import:com.c5000.mastery.client.components.picture'>
+    <ui:style>
+
+        .outer {
+            margin-bottom: 10px;
+        }
+
+        .inner {
+            position: relative;
+            padding-right: 10px;
+        }
+
+        .mouseOverEffect {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #5588FF;
+            opacity: 0.2;
+            border-radius: 5px;
+        }
+
+        .anchor {
+            outline: none;
+            color: #000000;
+            text-decoration: none !important;
+        }
+
+        .aboutOuter {
+            width: 100%;
+            margin-left: -122px;
+        }
+
+        .aboutInner {
+            margin: 6px 0 0 132px;
+        }
+
+        .title {
+            font-size: 16pt;
+        }
+
+        .reward {
+            font-size: 16pt;
+        }
+
+        .description {
+            font-size: 10pt;
+            overflow: hidden;
+        }
+
+        .categoryOuter {
+            margin-bottom: 10px;
+        }
+
+        .categoryLabel {
+            font-size: 8pt;
+            color: #888;
+        }
+
+        .category {
+            font-size: 10pt;
+            font-weight: bold;
+            color: #888;
+        }
+
+        .activities {
+            font-weight: bold;
+            font-size: 10pt;
+            color: #AAA;
+        }
+
+        .newActivities {
+            font-weight: bold;
+            font-size: 10pt;
+            color: #00AA00;
+        }
+
+    </ui:style>
+    <g:HTMLPanel styleName="{style.outer}">
+        <g:Anchor ui:field="anchor" styleName="{style.anchor}">
+        </g:Anchor>
+        <g:HTMLPanel ui:field="content" styleName="{style.inner}">
+            <div class="floatRight {style.aboutOuter}">
+                <div class="{style.aboutInner}">
+                    <div>
+                        <g:Label ui:field="reward" styleName="floatRight {style.reward}"/>
+                        <g:Label ui:field="title" styleName="{style.title}"/>
+                    </div>
+                    <div>
+                        <div class="floatRight">
+                            <g:Label ui:field="activities" styleName="inline {style.activities}"/>
+                            <g:Label ui:field="newActivities" styleName="inline {style.newActivities}" visible="false"/>
+                        </div>
+                        <div class="{style.categoryOuter}">
+                            <span class="{style.categoryLabel}">Category:</span>
+                            <g:Label ui:field="category" styleName="inline {style.category}"/>
+                        </div>
+                        <div class="stopFloat"/>
+                    </div>
+                    <g:Label ui:field="description" styleName="{style.description}"/>
+                </div>
+            </div>
+            <p:PictureV ui:field="skillPicture"/>
+            <div class="stopFloat"/>
+            <g:HTMLPanel ui:field="mouseOverEffect" styleName="{style.mouseOverEffect}" visible="false"/>
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,279 @@
+* {
+    font-family: Arial;
+    font-size: 8pt;
+}
+
+body {
+    margin: 0;
+    background-image: url("static/bg.png");
+    background-attachment: fixed;
+    background-color: #E0E0E0;
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: #000000;
+}
+
+
+/* layout */
+
+.inline {
+    display: inline;
+}
+
+.block {
+    display: block;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+.stopFloat {
+    clear: both;
+}
+
+.stretch {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* styles */
+
+@external .button;
+.button {
+    cursor: pointer;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    outline: none;
+    padding: 0;
+    text-align: center;
+    background-color: #F8F8F8;
+}
+.button:disabled {
+    cursor: default;
+}
+.button:disabled:hover {
+    outline: none;
+    background-color: #F8F8F8;
+}
+.button:active {
+    outline: none;
+    background-color: #F8F8F8;
+}
+.button:hover {
+    outline: none;
+    background-color: #F0F0F0;
+}
+.button:active:hover {
+    outline: none;
+    background-color: #F8F8F8;
+}
+.button-up {
+}
+.button-down {
+    background-color: #E8E8E8;
+}
+.button-up-hovering {
+}
+.button-down-hovering {
+    background-color: #E8E8E8;
+}
+
+
+@external .gwt-Button;
+.gwt-Button {
+    cursor: pointer;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    outline: none;
+    padding: 0;
+    text-align: center;
+    background-color: #F8F8F8;
+}
+.gwt-Button:active {
+    outline: none;
+    background-color: #F8F8F8;
+}
+.gwt-Button:hover {
+    outline: none;
+    background-color: #F0F0F0;
+}
+.gwt-Button:active:hover {
+    outline: none;
+    background-color: #F8F8F8;
+}
+.gwt-Button-up {
+}
+.gwt-Button-down {
+    background-color: #E8E8E8;
+}
+.gwt-Button-up-hovering {
+}
+.gwt-Button-down-hovering {
+    background-color: #E8E8E8;
+}
+
+
+@external .radioButton;
+.radioButton {
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    outline: none;
+    padding: 0;
+    text-align: center;
+}
+.radioButton-up {
+    background-color: #F8F8F8;
+    cursor: pointer;
+}
+.radioButton-down {
+    background-color: #E8E8E8;
+    cursor: default;
+}
+.radioButton-up-hovering {
+    background-color: #F0F0F0;
+    cursor: pointer;
+}
+.radioButton-down-hovering {
+    background-color: #E8E8E8;
+    cursor: default;
+}
+
+
+@external .toggleButton;
+.toggleButton {
+    cursor: pointer;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    outline: none;
+    padding: 0;
+    text-align: center;
+    background-color: #F8F8F8;
+}
+.toggleButton-up-disabled {
+    cursor: default;
+}
+.toggleButton-down-disabled {
+    cursor: default;
+}
+.toggleButton-up {
+    background-color: #F8F8F8;
+}
+.toggleButton-down {
+    background-color: #E8E8E8;
+}
+.toggleButton-up-hovering {
+    background-color: #F0F0F0;
+}
+.toggleButton-down-hovering {
+    background-color: #E8E8E8;
+}
+
+
+.topbar-anchor:link {
+    outline: none;
+    text-decoration: none;
+}
+.topbar-anchor:visited {
+}
+.topbar-anchor:hover {
+    text-shadow:
+        0 0 1px #FFFFFF,
+        0 0 2px #FFFFFF,
+        0 0 4px #FFFFFF;
+}
+.topbar-anchor:active {
+    background: url("static/menubutton-bg-down.png") repeat-x;
+}
+.topbar-anchor-active {
+    background: url("static/menubutton-bg-down.png") repeat-x;
+    text-shadow:
+        0 0 1px #FFFFFF,
+        0 0 2px #FFFFFF,
+        0 0 4px #FFFFFF;
+}
+
+
+.topbar-togglebutton {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.topbar-togglebutton-up {
+}
+.topbar-togglebutton-down {
+    background: url("static/menubutton-bg-down.png") repeat-x;
+}
+.topbar-togglebutton-up-hovering {
+    cursor: pointer;
+}
+.topbar-togglebutton-down-hovering {
+    background: url("static/menubutton-bg-down.png") repeat-x;
+}
+
+
+.upld-status .filename {
+    display: none;
+}
+
+.upld-status .prgbar-back {
+    position: relative;
+    width: 60px;
+    height: 22px;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+
+.upld-status .prgbar-done {
+    position: absolute;
+    height: 22px;
+    background-color: #C0FFC0;
+    border-radius: 3px;
+}
+
+.upld-status .prgbar-msg {
+    position: absolute;
+    width: 100%;
+    height: 22px;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 8pt;
+    color: #888;
+}
+
+.upld-status .status {
+    width: 60px;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 8pt;
+    color: #888;
+}
+
+.upld-status .cancel {
+}
+
+
+.abuse {
+    width: 24px;
+    height: 24px;
+    background-position: 2px 2px;
+    background-repeat: no-repeat;
+}
+.abuse-on {
+    background-image: url('/static/abuse-on.png');
+}
+.abuse-off {
+    background-image: url('/static/abuse-off.png');
+}

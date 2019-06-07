@@ -1,0 +1,101 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+        @eval top com.c5000.mastery.client.framework.Topbar.HEIGHT_CSS;
+        .outer {
+            position: absolute;
+            right: 0;
+            top: top;
+            z-index: 1000;
+            background-color: #393939;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding: 6px;
+        }
+
+        .facebook {
+            width: 168px;
+            height: 25px;
+            margin-bottom: 6px;
+            border: 0 none;
+            background-image: url('static/fblogin.png');
+            cursor: pointer;
+        }
+
+        .twitter {
+            border-radius: 0;
+        }
+
+        .anon {
+            width: 166px;
+            height: 23px;
+            margin-top: 6px;
+            display: block;
+        }
+
+        .register {
+            width: 166px;
+            height: 23px;
+            margin-top: 6px;
+            display: block;
+        }
+
+        .username {
+            width: 92px;
+        }
+
+        .password {
+            width: 92px;
+        }
+
+        .anonLogin {
+            width: 110px;
+            height: 20px;
+        }
+
+        .anonLoginCancel {
+            width: 50px;
+            height: 20px;
+        }
+
+        .anonLabels {
+            width: 60px;
+            text-align: left;
+            color: #FFF;
+        }
+
+        .credential {
+            margin-bottom: 5px;
+        }
+
+    </ui:style>
+    <g:HTMLPanel styleName="{style.outer}">
+        <g:HTMLPanel ui:field="loginSelection">
+            <g:Button ui:field="facebook" styleName="{style.facebook}"/>
+            <div class="sign_in_with_twitter lighter">
+                <div />
+                <g:Button ui:field="twitter" styleName="{style.twitter}">
+                    <div class="icon" />
+                    Login with Twitter
+                </g:Button>
+            </div>
+            <g:Button ui:field="anon" styleName="button {style.anon}" text="Login with account"/>
+        </g:HTMLPanel>
+        <g:HTMLPanel ui:field="anonLoginForm" visible="false">
+            <table class="{style.credential}">
+                <tr>
+                    <td class="{style.anonLabels}">Email / Username:</td>
+                    <td><g:TextBox ui:field="username" styleName="{style.username}"/></td>
+                </tr>
+                <tr>
+                    <td class="{style.anonLabels}">Password:</td>
+                    <td><g:PasswordTextBox ui:field="password" styleName="{style.password}"/></td>
+                </tr>
+            </table>
+            <g:Button ui:field="anonLoginCancel" styleName="button {style.anonLoginCancel}" text="Cancel"/>
+            <g:Button ui:field="anonLogin" styleName="button {style.anonLogin}" text="Login"/>
+        </g:HTMLPanel>
+        <g:Button ui:field="register" styleName="button {style.register}" text="Register account"/>
+    </g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,96 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta property="og:description" content="The place where you can share ideas and activities.">
+    <meta property="og:image" content="http://busyhumans.com/static/icon.png">
+    <title>BUSY HUMANS</title>
+    <link type="text/css" rel="stylesheet" href="mastery.css">
+    <link type="text/css" rel="stylesheet" href="twitter.css">
+    <link href="favicon.png" rel="shortcut icon" type="image/png"/>
+    <link href="favicon.png" rel="icon" type="image/png">
+    <script type="text/javascript" language="javascript" src="jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" language="javascript" src="mastery/mastery.nocache.js"></script>
+    <script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+    <script type="text/javascript" src="cryptojs/sha256.js"></script>
+    <script type="text/javascript" src="cryptojs/enc-base64-min.js"></script>
+    <script type="text/javascript">
+        var addthis_config = {
+            data_track_addressbar: false,
+            ui_click: true,
+            ui_header_background: '#000000',
+            ui_header_color: '#ffffff',
+            services_compact: 'facebook, twitter, google_plusone_share, reddit, stumbleupon, tumblr, pinterest_share, digg, blogger, more'
+        }
+    </script>
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-5036b1d2688a391c"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-33885117-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="mastery-body-main">
+
+    <div id="fb-root"></div>
+    <script>
+        (function (d) {
+            var id = 'facebook-jssdk';
+            if (d.getElementById(id)) {
+                return;
+            }
+            var js = d.createElement('script');
+            js.id = id;
+            js.async = true;
+            js.src = "//connect.facebook.net/en_US/all.js";
+            d.getElementsByTagName('head')[0].appendChild(js);
+        }(document));
+    </script>
+
+    <script type="text/javascript">
+        function getWikipediaSummary(page, callback) {
+            try {
+                jQuery.getJSON("http://en.wikipedia.org/w/api.php?action=parse&format=json&callback=?", {page:page, prop:"text"}, function (data) {
+                    if(typeof(data) !== 'undefined' && typeof(data.parse) !== 'undefined') {
+                        try {
+                            var html = data.parse.text['*'];
+                            var elem = document.createElement('div');
+                            elem.innerHTML = html;
+                            var p = jQuery(elem).find("p").first();
+                            callback(p.text());
+                        }
+                        catch (e) {
+                            callback('');
+                        }
+                    }
+                    else {
+                        callback('');
+                    }
+                });
+            }
+            catch (e) {
+                callback('');
+            }
+        }
+    </script>
+
+    <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position:absolute;width:0;height:0;border:0"></iframe>
+
+    <noscript>
+        <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+            Your web browser must have JavaScript enabled
+            in order for this application to display correctly.
+        </div>
+    </noscript>
+
+</body>
+
+</html>

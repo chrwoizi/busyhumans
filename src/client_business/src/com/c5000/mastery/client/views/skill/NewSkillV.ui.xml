@@ -1,0 +1,125 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:c='urn:import:com.c5000.mastery.client.components.picture'>
+    <ui:style>
+
+        .outer {
+            margin-bottom: 10px;
+        }
+
+        .inner {
+            position: relative;
+        }
+
+        .details2Inner {
+            margin-left: 62px;
+        }
+
+        .pictureOuter {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border: 1px solid #DDD;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .pictureInner {
+            width: 50px;
+            height: auto;
+        }
+
+        .title {
+            padding-top: 6px;
+            font-size: 14pt;
+        }
+
+        .descriptionCaption {
+            font-size: 10pt;
+        }
+
+        .description {
+            width: 100%;
+        }
+
+        .pictureSearchPanel {
+            margin-top: 10px;
+        }
+
+        .pictureSearchCaption {
+            font-size: 10pt;
+        }
+
+        .pictureSearch {
+            margin-left: 10px;
+            font-size: 10pt;
+        }
+
+        .pictureLargeOuter {
+            margin-right: 10px;
+        }
+
+        .pictures {
+            margin-top: 10px;
+        }
+
+        .picturesPanel {
+            position: relative;
+            margin: 0 56px 0 152px;
+        }
+
+        .arrowLeft {
+            margin: 40px 10px 0 0;
+        }
+
+        .noPicturesFound {
+            position: absolute;
+            top: 48px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .loading {
+            position: absolute;
+            top: 48px;
+            width: 100%;
+            text-align: center;
+            color: #888;
+        }
+
+    </ui:style>
+    <g:HTMLPanel styleName="{style.outer}">
+        <g:HTMLPanel styleName="{style.inner}">
+            <div class="floatLeft">
+                <div class="{style.pictureOuter}">
+                    <g:Image ui:field="picture" url="static/default-skill.png" altText="" styleName="{style.pictureInner}"/>
+                </div>
+            </div>
+            <div class="{style.details2Inner}">
+                <div>
+                    <g:Label ui:field="title" styleName="{style.title}"/>
+                    <div class="{style.descriptionCaption}">Description:</div>
+                    <g:TextArea ui:field="description" styleName="{style.description}" visibleLines="3"/>
+                    <div class="{style.pictureSearchPanel}">
+                        <div class="inline {style.pictureSearchCaption}">Search for a picture:</div>
+                        <g:TextBox ui:field="pictureSearch" styleName="{style.pictureSearch}"/>
+                        <div>
+                            <div class="floatLeft {style.pictureLargeOuter}">
+                                <c:PictureV ui:field="pictureLarge"/>
+                            </div>
+                            <img src="static/arrow-left.png" alt="" class="floatLeft {style.arrowLeft}"/>
+                            <div class="{style.picturesPanel}">
+                                <g:HorizontalPanel ui:field="skillPictures1" styleName="{style.pictures}"/>
+                                <g:HorizontalPanel ui:field="skillPictures2" styleName="{style.pictures}"/>
+                                <g:Label ui:field="noPicturesFound" text="No pictures found for that search term." styleName="{style.noPicturesFound}" visible="false"/>
+                                <g:Label ui:field="loading" text="Loading..." styleName="{style.loading}" visible="false"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stopFloat"/>
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder>

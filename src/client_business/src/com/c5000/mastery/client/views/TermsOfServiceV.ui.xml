@@ -1,0 +1,198 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+    <ui:style>
+        .title {
+            margin: 0 0 14px 0;
+            font-size: 16pt;
+        }
+
+        .caption {
+            font-weight: bold;
+        }
+
+        .hint {
+            margin-bottom: 10px;
+            color: #E80000;
+        }
+    </ui:style>
+    <g:HTMLPanel>
+        <g:HTMLPanel ui:field="english">
+            <div class="{style.title}">Terms of Usage and Privacy Policy</div>
+            <g:Label ui:field="hintEnglish" visible="false" styleName="{style.hint}" text="Please read carefully and click the agree button below."/>
+            <div class="{style.caption}">Preamble:</div>
+            <div>
+                The service busyhumans.com provides access to public and protected content.
+                Protected content can only be viewed by users with a personal account.
+                Pages with public and/or protected content can collect anonymous data of usage behaviour through
+                logging of network traffic and through cookies.
+                The following document chapters describe the terms of usage and privacy policy for registered
+                users of busyhumans.com.
+                The user is asked for explicit consent before the following parts come into effect.
+            </div>
+            <br/>
+            <div class="{style.caption}">1 - User Account:</div>
+            <div>
+                Some features of this service can only be used by registered users.
+                A registered user is a user with a personal user account.
+                A user account can be connected to a Facebook or Twitter account, depending on the used login method.
+                This connection will be established when the user first logs in via the Facebook or Twitter login button.
+            </div>
+            <br/>
+            <div class="{style.caption}">2 - Personal Data:</div>
+            <div>
+                The personal data collected by busyhumans.com is categorized as follows:
+                <ul>
+                    <li>
+                        <b>User information:</b>
+                        Personal information that is entered on busyhumans.com by the user
+                        (including but not limited to the name and the email address)
+                        and data that may be transmitted from Facebook or Twitter to busyhumans.com.
+                        The nature of this transmitted data is described in the Facebook or Twitter dialog window when the user gives
+                        his/her consent to the usage of this data by busyhumans.com.
+                    </li>
+                    <li>
+                        <b>Media content:</b>
+                        Texts, links and embedded or uploaded images and videos that are provided by the user.
+                    </li>
+                </ul>
+            </div>
+            <br/>
+            <div class="{style.caption}">3 - Collecting personal data from external services:</div>
+            <div>
+                This section only applies to users who use the Facebook or Twitter login method.
+                The user gives his/her consent to the transmitting of personal data from Facebook or Twitter to busyhumans.com upon
+                the first login and upon possible future changes to the extent of the transmitted data via the according
+                Facebook or Twitter dialog window.
+                The transmitted data may be retrieved from Facebook or Twitter again in the future without any further consent as
+                long as the initial usage consent is not withdrawn.
+            </div>
+            <br/>
+            <div class="{style.caption}">4 - Usage of personal data:</div>
+            <div>
+                The user information may be published on busyhumans.com unless the user explicitly withdraws his/her
+                consent.
+                Media content can be assigned to a license white it is being provided by the user.
+                Media content that is not assigned to a license will become property of busyhumans.com.
+                The personal data is not transmitted to any third party.
+            </div>
+            <br/>
+            <div class="{style.caption}">5 - Withdrawal of the data usage consent:</div>
+            <div>
+                The user can withdraw the consent of data usage at any time without mentioning any
+                reasons, as long as the data is not assigned to a license that allows further publication.
+                In consequence of a withdrawal the access by any user to all parts of the personal data will be blocked.
+                In case a third party publishes personal data about any other person on busyhumans.com, the affected
+                person can effect the deletion of this data.
+                A consent withdrawal or a deletion request must be directed at info@busyhumans.com.
+                A deletion can only be performed if the requesting person is the affected person or acts on behalf
+                thereof and can provide a proof about that.
+            </div>
+            <br/>
+            <div class="{style.caption}">6 - Validity:</div>
+            <div>
+                The terms of usage and the privacy policy may be changed at any time.
+                Users with a user account will be notified about these changes and asked for consent on the next usage
+                of busyhumans.com.
+                The access to this service will be blocked until the user explicitly declares his/her consent to the
+                changes.
+                An explicit refusal corresponds to a withdrawal of the data usage consent.
+                Should any parts of the terms of agreement and/or the privacy policy be invalid, other parts
+                will remain intact.
+            </div>
+            <br/>
+            <div>
+                Please send your questions, suggestions, or wishes about these terms to info@busyhumans.com
+            </div>
+        </g:HTMLPanel>
+        <g:HTMLPanel ui:field="german" visible="false">
+            <div class="{style.title}">Nutzungsbedingungen und Datenschutzerklärung</div>
+            <g:Label ui:field="hintGerman" visible="false" styleName="{style.hint}" text="Bitte aufmerksam lesen und mit dem Button am Ende der Seite bestätigen."/>
+            <div class="{style.caption}">Vorbemerkung:</div>
+            <div>
+                Der Dienst busyhumans.com bietet frei zugängliche und zugangsbeschränkte Inhalte.
+                Zugangsbeschränkte Inhalte können nur mit einem persönlichen Benutzerkonto abgerufen werden.
+                Frei zugängliche und zugangsbeschränkte Seiten von busyhumans.com können anonyme Daten zum
+                Nutzungsverhalten durch Protokollierung der Serveranfragen und durch Cookies erfassen.
+                Es folgen die zustimmungspflichtigen Teile der Datenschutzerklärung und die Nutzungsbedinungen für
+                registrierte Benutzer. Der Nutzer wird vor inkrafttreten dieser Bedingungen um explizite Zustimmung
+                gebeten.
+            </div>
+            <br/>
+            <div class="{style.caption}">1 - Benutzerkonto:</div>
+            <div>
+                Einige Funktionen dieses Dienstes können vom Nutzer nur verwendet werden, wenn er bzw. sie über ein
+                Benutzerkonto bei busyhumans.com verfügt.
+                Ein Benutzerkonto bei busyhumans.com kann an ein Benutzerkonto bei Facebook oder Twitter gebunden sein,
+                falls die Facebook- oder Twitter-Loginmethode verwendet wird.
+                Diese Bindung wird beim erstmaligen Anmelden über den Facebook bzw. Twitter Login-Button erstellt.
+            </div>
+            <br/>
+            <div class="{style.caption}">2 - Personenbezogene Daten:</div>
+            <div>
+                Die von busyhumans.com erfassten personenbezogenen Daten werden wie folgt kategorisiert:
+                <ul>
+                    <li>
+                        <b>Informationen zur Person:</b>
+                        Daten, welche der Benutzer selbst eingibt (z.B. Name und Emailadresse) sowie Daten,
+                        welche von Facebook bzw. Twitter an busyhumans.com übermittelt werden.
+                        Die Zusammensetzung der übermittelten Daten wird im entsprechenden Facebook bzw. Twitter Dialogfenster angezeigt, wo der
+                        Nutzer seine Zustimmung zu der Nutzung durch busyhumans.com erteilen oder verweigern kann.
+                    </li>
+                    <li>
+                        <b>Medieninhalte:</b>
+                        Eingegebene Texte sowie verlinkte, eingebettete und/oder hochgeladene Bilder oder Videos.
+                    </li>
+                </ul>
+            </div>
+            <br/>
+            <div class="{style.caption}">3 - Erfassung personenbezogener Daten über externe Dienste:</div>
+            <div>
+                Dieser Abschnitt bezieht sich ausschließlich auf Benutzer, die die Facebook- oder Twitter-Loginmethode verwenden.
+                Der Nutzer erklärt bei der ersten Anmeldung und bei zuküftigen Änderungen des genutzten Datenumfangs im
+                entsprechenden Facebook bzw. Twitter Dialogfenster sein Einverständnis zur Übertragung von personenbezogenen Daten
+                von Facebook bzw. Twitter an busyhumans.com. Die dabei übertragenen Daten können ohne erneute Einverständniserklärung
+                im weiteren Nutzungsverhältnis erneut von Facebook bzw. Twitter abgerufen werden, um deren Aktualität zu
+                gewährleisten.
+            </div>
+            <br/>
+            <div class="{style.caption}">4 - Nutzung personenbezogener Daten:</div>
+            <div>
+                Alle Informationen zur Person dürfen auf busyhumans.com veröffentlicht werden, sofern der Nutzer dem
+                nicht ausdrücklich widerspricht.
+                Medieninhalte können beim Bereitstellen durch den Benutzer einer Lizenz zugewiesen werden.
+                Wenn keine Lizenz angegeben ist, gehen die Medieninhalte in der Besitz von busyhumans.com über.
+                Es werden keine personenbezogenen Daten durch busyhumans.com an Dritte übertragen.
+            </div>
+            <br/>
+            <div class="{style.caption}">5 - Widerspruch zur Datennutzung:</div>
+            <div>
+                Ein Widerpruch zur Nutzung der personenbezogenen Daten ist jederzeit ohne Angabe von Gründen möglich,
+                sofern dessen Veröffentlichung auf busyhumans.com nicht durch eine geltende Lizenz genehmigt ist.
+                In Folge des Widerspruchs werden die betroffenen Daten für andere Nutzer unzugänglich gemacht.
+                Sollten personenbezogene Daten einer Person durch Dritte an busyhumans.com ermittelt worden sein, so
+                kann die betroffene Person eine Löschung dieser Daten erwirken.
+                Ein Widerspruch bzw. ein Löschungsantrag ist schriftlich an info@busyhumans.com zu stellen.
+                Die Löschung kann nur durchgeführt werden, wenn der Antragsteller die betroffene Person ist bzw. in
+                dessen Auftrag handelt und einen Beweis dafür hervorbringt.
+            </div>
+            <br/>
+            <div class="{style.caption}">6 - Gültigkeit:</div>
+            <div>
+                Die Nutzungsbedinungen und die Datenschutzerklärung können jederzeit geändert werden.
+                Nutzer mit einem Benutzerkonto werden beim nachfolgenden Betreten von busyhumans.com benachrichtigt und
+                um Einverständnis gebeten.
+                Der Zugriff auf den Dienst wird gesperrt, bis die Einverständniserklärung durch den Nutzer erteilt
+                wurde.
+                Eine explizite Verweigerung des Einverständnis entspricht dem Widerspruch zur Datennutzung.
+                Sollten Teile der Nutzungsbedinung und/oder der Datenschutzerklärung ungültig sein, so behalten die
+                übrigen Teile ihre Gültigkeit.
+            </div>
+            <br/>
+            <div>
+                Sollten Sie Fragen, Anregungen oder Wünsche zu diesen Bedingungen haben, wenden Sie sich bitte an
+                info@busyhumans.com
+            </div>
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder>

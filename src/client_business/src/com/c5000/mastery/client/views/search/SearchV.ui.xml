@@ -1,0 +1,29 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+
+        .caption {
+            font-size: 12pt;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .search {
+            width: 229px;
+            margin-bottom: 10px;
+        }
+
+        .hasMore {
+            color: #888;
+        }
+
+    </ui:style>
+    <g:HTMLPanel>
+        <div class="{style.caption}">Search:</div>
+        <g:TextBox ui:field="search" styleName="{style.search}"/>
+        <g:HTMLPanel ui:field="results"/>
+        <g:Label ui:field="hasMore" styleName="floatRight {style.hasMore}" text="and more..." visible="false"/>
+        <div class="stopFloat"/>
+    </g:HTMLPanel>
+</ui:UiBinder> 

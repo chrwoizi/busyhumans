@@ -1,0 +1,145 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:my="urn:import:com.c5000.mastery.client.components"
+             xmlns:f="urn:import:com.c5000.mastery.client.framework"
+             xmlns:p="urn:import:com.c5000.mastery.client.components.picture">
+    <ui:style>
+
+        .outer {
+            float: right;
+            height: 100%;
+            text-align: center;
+        }
+
+        .avatarOuter {
+            float: left;
+            width: 26px;
+            height: 26px;
+            margin: 5px;
+            overflow: hidden;
+        }
+
+        .avatarInner {
+            width: 26px;
+            width: 26px;
+        }
+
+        .name {
+            max-width: 325px;
+            padding-top: 9px;
+            font-size: 12pt;
+            color: #FFFFFF;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .denied {
+            padding-right: 10px;
+            color: #FF0000;
+        }
+
+        .profileLink {
+            padding-right: 4px;
+            text-decoration: none;
+            outline: none;
+        }
+
+        .login {
+            padding: 6px 36px 0 0;
+            font-size: 16pt;
+            font-weight: bold;
+            color: #FFF;
+        }
+
+        .login-hover {
+            text-shadow: 0 0 1px #FFFFFF, 0 0 2px #FFFFFF, 0 0 4px #FFFFFF;
+        }
+
+        .preferences {
+            margin-top: 8px;
+            padding: 0 2px;
+            background: none;
+            border: 0 none;
+            cursor: pointer;
+        }
+
+        .logout {
+            margin-top: 10px;
+            padding: 0 6px 0 2px;
+            background: none;
+            border: 0 none;
+            cursor: pointer;
+        }
+
+        .loginInner {
+            position: relative;
+            padding: 0 0 4px 10px;
+        }
+
+        .loginIcon {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+    </ui:style>
+    <g:HTMLPanel styleName="{style.outer}">
+        <g:HTMLPanel ui:field="loggedOut">
+            <my:WidgetToggleButton styleName="topbar-togglebutton floatLeft" ui:field="loginMenuButton">
+                <my:upFace>
+                    <g:HTMLPanel>
+                        <g:HTMLPanel styleName="{style.loginInner}">
+                            <g:Label text="Login" styleName="{style.login}"/>
+                            <g:Image url="static/accountbutton-icon.png" altText="" styleName="{style.loginIcon}"/>
+                        </g:HTMLPanel>
+                    </g:HTMLPanel>
+                </my:upFace>
+                <my:downFace>
+                    <g:HTMLPanel>
+                        <g:HTMLPanel styleName="{style.loginInner}">
+                            <g:Label text="Login" styleName="{style.login}"/>
+                            <g:Image url="static/accountbutton-icon.png" altText="" styleName="{style.loginIcon}"/>
+                        </g:HTMLPanel>
+                    </g:HTMLPanel>
+                </my:downFace>
+                <my:upHoveringFace>
+                    <g:HTMLPanel>
+                        <g:HTMLPanel styleName="{style.loginInner}">
+                            <g:Label text="Login" styleName="{style.login} {style.login-hover}"/>
+                            <g:Image url="static/accountbutton-icon-hover.png" altText=""
+                                     styleName="{style.loginIcon}"/>
+                        </g:HTMLPanel>
+                    </g:HTMLPanel>
+                </my:upHoveringFace>
+                <my:downHoveringFace>
+                    <g:HTMLPanel>
+                        <g:HTMLPanel styleName="{style.loginInner}">
+                            <g:Label text="Login" styleName="{style.login} {style.login-hover}"/>
+                            <g:Image url="static/accountbutton-icon-hover.png" altText=""
+                                     styleName="{style.loginIcon}"/>
+                        </g:HTMLPanel>
+                    </g:HTMLPanel>
+                </my:downHoveringFace>
+            </my:WidgetToggleButton>
+            <f:LoginDropdown ui:field="loginDropdown" visible="false"/>
+        </g:HTMLPanel>
+        <g:HTMLPanel ui:field="loggedIn" visible="false">
+            <g:Anchor ui:field="myselfAnchor" href="#person=me" styleName="floatLeft {style.profileLink}"/>
+            <g:HTMLPanel ui:field="myselfAnchorInner">
+                <div class="{style.avatarOuter}">
+                    <p:BorderlessPictureV ui:field="avatar" styleName="{style.avatarInner}"/>
+                </div>
+                <g:Label ui:field="name" styleName="floatLeft {style.name}"/>
+            </g:HTMLPanel>
+            <g:Button ui:field="preferencesButton" styleName="floatLeft {style.preferences}">
+                <img src="static/preferences.png" alt=""/>
+            </g:Button>
+            <g:Button ui:field="logoutButton" styleName="floatLeft {style.logout}">
+                <img src="static/logout.png" alt=""/>
+            </g:Button>
+        </g:HTMLPanel>
+        <g:HTMLPanel ui:field="denied" visible="false">
+            <g:Label text="Please contact banned@busyhumans.com" styleName="{style.name} {style.denied}"/>
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder>

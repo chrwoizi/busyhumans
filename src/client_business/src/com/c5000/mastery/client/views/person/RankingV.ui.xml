@@ -1,0 +1,79 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:p='urn:import:com.c5000.mastery.client.components.picture'>
+    <ui:style>
+
+        .outer {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .aboutOuter {
+            width: 100%;
+            margin-left: -60px;
+        }
+
+        .aboutInner {
+            margin-left: 60px;
+        }
+
+        .row1 {
+            margin: 2px 0 4px 0;
+        }
+
+        .rank {
+            display: inline;
+            font-size: 16pt;
+            font-weight: bold;
+        }
+
+        .name {
+            display: inline;
+            font-size: 10pt;
+            font-weight: bold;
+            margin-left: 6px;
+        }
+
+        .stats {
+            font-size: 8pt;
+            font-weight: bold;
+        }
+
+        .mouseOverEffect {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #5588FF;
+            opacity: 0.2;
+            border-radius: 5px;
+        }
+
+        .anchor {
+            position: relative;
+            outline: none;
+            color: #000000;
+            text-decoration: none !important;
+        }
+
+    </ui:style>
+    <g:HTMLPanel styleName="{style.outer}">
+        <g:Anchor ui:field="anchor" styleName="{style.anchor}">
+        </g:Anchor>
+        <g:HTMLPanel ui:field="content">
+            <div class="floatRight {style.aboutOuter}">
+                <div class="{style.aboutInner}">
+                    <div class="{style.row1}">
+                        <g:Label ui:field="rank" styleName="{style.rank}"/>
+                        <g:Label ui:field="name" styleName="{style.name}"/>
+                    </div>
+                    <g:Label ui:field="stats" styleName="{style.stats}"/>
+                </div>
+            </div>
+            <p:PictureV ui:field="picture"/>
+            <div class="stopFloat"/>
+            <g:HTMLPanel ui:field="mouseOverEffect" styleName="{style.mouseOverEffect}" visible="false"/>
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder> 

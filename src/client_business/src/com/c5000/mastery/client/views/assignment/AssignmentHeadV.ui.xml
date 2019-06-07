@@ -1,0 +1,187 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:p='urn:import:com.c5000.mastery.client.components.picture'
+             xmlns:c='urn:import:com.c5000.mastery.client.components'>
+    <ui:style>
+
+        .aboutOuter {
+            width: 100%;
+            margin-left: -122px;
+        }
+
+        .aboutInner {
+            margin: 6px 0 0 132px;
+        }
+
+        .title {
+            font-size: 16pt;
+            color: #000;
+        }
+
+        .reward {
+            font-size: 16pt;
+        }
+
+        .description {
+            font-size: 10pt;
+            overflow: hidden;
+        }
+
+        .author {
+            margin: 2px 10px 0 0;
+        }
+
+        .authorPrefix {
+            margin-right: 4px;
+            color: #888;
+        }
+
+        .authorName {
+            color: #888;
+        }
+
+        .authorName > a {
+            color: #888;
+        }
+
+        .abuse {
+            height: 18px;
+            margin-right: 6px;
+            padding: 2px 2px 0px 2px;
+        }
+
+        .abuseReportCount {
+            padding-top: 2px;
+        }
+
+        .delete {
+            width: 22px;
+            height: 22px;
+            margin-right: 6px;
+            background-image: url('/static/trash.png');
+            background-repeat: no-repeat;
+            background-position: 2px;
+        }
+
+        .speedup {
+            width: 22px;
+            height: 22px;
+            margin-right: 6px;
+        }
+
+        .categoryOuter {
+            margin-bottom: 10px;
+        }
+
+        .categoryLabel {
+            font-size: 8pt;
+            color: #888;
+        }
+
+        .category {
+        }
+
+        .category a {
+            color: #888;
+            font-size: 10pt;
+            font-weight: bold;
+        }
+
+        .buttons {
+            margin: 2px 0 0 6px;
+        }
+
+        .boostUp {
+            height: 16px;
+            margin: 2px 2px 0 0;
+            padding: 2px 2px 0px 2px;
+            cursor: pointer;
+        }
+
+        .boostDown {
+            height: 16px;
+            margin: 2px 6px 0 0;
+            padding: 2px 2px 0px 2px;
+            cursor: pointer;
+        }
+
+        .social {
+            margin-top: 8px;
+        }
+
+    </ui:style>
+    <g:HTMLPanel>
+        <div class="floatRight {style.aboutOuter}">
+            <div class="{style.aboutInner}">
+                <div>
+                    <div class="floatRight">
+                        <div class="floatLeft">
+                            <g:ToggleButton ui:field="toggleRewardUp" styleName="toggleButton {style.boostUp}">
+                                <g:upFace>
+                                    <img src="/static/reward-up-off.png" alt=""/>
+                                </g:upFace>
+                                <g:downFace>
+                                    <img src="/static/reward-up-on.png" alt=""/>
+                                </g:downFace>
+                            </g:ToggleButton>
+                        </div>
+                        <div class="floatLeft">
+                            <g:ToggleButton ui:field="toggleRewardDown" styleName="toggleButton {style.boostDown}">
+                                <g:upFace>
+                                    <img src="/static/reward-down-off.png" alt=""/>
+                                </g:upFace>
+                                <g:downFace>
+                                    <img src="/static/reward-down-on.png" alt=""/>
+                                </g:downFace>
+                            </g:ToggleButton>
+                        </div>
+                        <g:Label ui:field="reward" styleName="inline {style.reward}"/>
+                    </div>
+                    <div>
+                        <g:Label ui:field="title" styleName="floatLeft {style.title}"/>
+                        <div class="floatLeft {style.buttons}">
+                            <g:Button ui:field="delete" styleName="button floatLeft {style.delete}" title="Delete the assignment." visible="false"/>
+                            <g:ToggleButton ui:field="abuse" styleName="toggleButton floatLeft {style.abuse}" title="Please activate this flag if the assignment contains illegal or unethic material.">
+                                <g:upFace>
+                                    <img src="/static/abuse-off.png" alt="gray flag"/>
+                                </g:upFace>
+                                <g:downFace>
+                                    <img src="/static/abuse-on.png" alt="red flag"/>
+                                </g:downFace>
+                            </g:ToggleButton>
+                            <c:WidgetCustomButton ui:field="clearAbuse" styleName="button floatLeft {style.abuse}" title="Delete all abuse reports." visible="false">
+                                <c:upFace>
+                                    <g:HTMLPanel>
+                                        <img src="/static/abuse-on.png" alt="red flag" class="floatLeft"/>
+                                        <g:Label ui:field="abuseReportCount" styleName="floatLeft {style.abuseReportCount}"/>
+                                    </g:HTMLPanel>
+                                </c:upFace>
+                            </c:WidgetCustomButton>
+                            <g:Button ui:field="slowdown" styleName="button floatLeft {style.speedup}" text="&lt;&lt;" visible="false"/>
+                            <g:Button ui:field="speedup" styleName="button floatLeft {style.speedup}" text="&gt;&gt;" visible="false"/>
+                        </div>
+                        <div class="stopFloat"/>
+                    </div>
+                </div>
+                <div>
+                    <div class="{style.categoryOuter}">
+                        <span class="{style.categoryLabel}">Category:</span>
+                        <g:Hyperlink ui:field="category" styleName="inline {style.category}"/>
+                    </div>
+                    <div class="stopFloat"/>
+                </div>
+                <p ui:field="description" class="{style.description}"/>
+                <div class="floatRight {style.author}">
+                    <div class="inline {style.authorPrefix}">--</div>
+                    <g:Hyperlink ui:field="authorLink" styleName="inline {style.authorName}" visible="false"/>
+                    <g:Label ui:field="authorLabel" styleName="inline {style.authorName}"/>
+                </div>
+                <div class="stopFloat"/>
+                <g:HTMLPanel ui:field="socialOuter" styleName="{style.social}"/>
+            </div>
+        </div>
+        <p:PictureV ui:field="skillPicture"/>
+        <div class="stopFloat"/>
+    </g:HTMLPanel>
+</ui:UiBinder>

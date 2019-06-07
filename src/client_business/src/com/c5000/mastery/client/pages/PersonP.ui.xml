@@ -1,0 +1,68 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:a='urn:import:com.c5000.mastery.client.views'>
+    <ui:style>
+
+        .empty {
+            color: #888888;
+        }
+
+        .headers {
+            margin: 20px 0;
+        }
+
+        .tabHeader {
+            width: 33%;
+            height: 30px;
+            display: table;
+        }
+
+        .tabHeader1 {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .tabHeader2 {
+            border-radius: 0;
+        }
+
+        .tabHeader3 {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .tabHeader > div {
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 10pt;
+        }
+
+        .tabContent {
+        }
+
+    </ui:style>
+    <g:HTMLPanel>
+        <g:HTMLPanel ui:field="notFound" visible="false">
+            The requested person does not exist.
+        </g:HTMLPanel>
+        <g:HTMLPanel ui:field="found" visible="false">
+            <g:HTMLPanel ui:field="headerPanel"/>
+            <div class="{style.headers}">
+                <g:ToggleButton ui:field="participationsHeader" text="Activities" styleName="toggleButton floatLeft {style.tabHeader} {style.tabHeader1}" title="Assignments that have been completed by this person." />
+                <g:ToggleButton ui:field="createdHeader" text="Created" styleName="toggleButton floatLeft {style.tabHeader} {style.tabHeader2}" title="Assignments that have been created by this person." />
+                <g:ToggleButton ui:field="achievementsHeader" text="Skills" styleName="toggleButton floatLeft {style.tabHeader} {style.tabHeader3}" title="Activities of this person grouped by category." />
+                <div class="stopFloat"/>
+            </div>
+            <g:HTMLPanel ui:field="participationsContent" styleName="{style.tabContent}" visible="false">
+                <a:LazyListV ui:field="participations" visible="false"/>
+            </g:HTMLPanel>
+            <g:HTMLPanel ui:field="createdContent" styleName="{style.tabContent}" visible="false">
+                <a:LazyListV ui:field="created" visible="false"/>
+            </g:HTMLPanel>
+            <g:HTMLPanel ui:field="achievementsContent" styleName="{style.tabContent}" visible="false">
+                <a:LazyListV ui:field="achievements" visible="false"/>
+            </g:HTMLPanel>
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder> 

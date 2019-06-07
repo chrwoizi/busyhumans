@@ -1,0 +1,44 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+    <ui:style>
+
+        .outer {
+            position: relative;
+            outline: none;
+        }
+
+        .inner {
+            border: 1px solid #DDD;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .licenseButton {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 22px;
+            height: 22px;
+        }
+
+        .licensePos {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .image {
+            border: 0 none;
+        }
+
+    </ui:style>
+    <g:FocusPanel ui:field="outer" styleName="{style.outer}">
+        <g:HTMLPanel ui:field="inner" styleName="{style.inner}">
+            <g:Anchor ui:field="imageLink"/>
+            <g:Image ui:field="image" url="static/default-skill.png" altText="" styleName="{style.image}"/>
+            <g:SimplePanel ui:field="licensePos" styleName="{style.licensePos}"/>
+            <g:Button ui:field="licenseButton" styleName="button {style.licenseButton}" text="?" visible="false"/>
+        </g:HTMLPanel>
+    </g:FocusPanel>
+</ui:UiBinder>

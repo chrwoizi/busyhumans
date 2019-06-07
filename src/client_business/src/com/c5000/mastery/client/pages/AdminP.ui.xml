@@ -1,0 +1,107 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:f='urn:import:com.c5000.mastery.client.components.upload'>
+    <ui:style>
+        .auth {
+            color: #888888;
+        }
+
+        .titleN {
+            margin: 50px 0 14px 0;
+            font-size: 16pt;
+        }
+
+        .cloak {
+            margin: 0 0 20px 0;
+        }
+
+        .testPerson {
+            margin: 0 0 20px 0;
+        }
+
+        .uploadPicture {
+            width: 60px;
+            height: 22px;
+            margin: 0 0 6px 0;
+        }
+
+        .testPersonCreate {
+            padding: 2px;
+            width: 190px;
+        }
+
+        .announcement {
+            margin: 0 0 20px 0;
+        }
+
+        .announcementCreate {
+            padding: 2px;
+            width: 190px;
+        }
+
+        .userCount {
+            font-size: 16pt;
+        }
+    </ui:style>
+    <g:HTMLPanel>
+        <g:HTMLPanel ui:field="innerDenied">
+            <div class="{style.auth}">Please login as admin.</div>
+        </g:HTMLPanel>
+        <g:HTMLPanel ui:field="innerGranted" visible="false">
+            <div class="{style.cloak}">
+                <span>Impersonate:</span>
+                <g:ListBox ui:field="cloaks"/>
+            </div>
+            <g:Button ui:field="subscribeall" styleName="button" text="Subscribe to all assignments"/>
+            <g:Button ui:field="notifications" styleName="button" text="Send pending notifications"/>
+            <div class="{style.titleN}">Create Announcement</div>
+            <div class="{style.announcement}">
+                <table>
+                    <tr>
+                        <td>Text:</td>
+                        <td>
+                            <div>Use {show} or {hide} to include the relative show/hide time</div>
+                            <g:TextArea ui:field="announcementText" characterWidth="60"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Show in seconds:</td>
+                        <td><g:TextBox ui:field="announcementShowTime" text="0" width="50px"/></td>
+                    </tr>
+                    <tr>
+                        <td>Hide in seconds:</td>
+                        <td><g:TextBox ui:field="announcementHideTime" width="50px"/></td>
+                    </tr>
+                    <tr>
+                        <td>Type:</td>
+                        <td><g:CheckBox ui:field="announcementMaintenance" text="Maintenance"/></td>
+                    </tr>
+                </table>
+                <g:Button ui:field="announcementCreate" styleName="button {style.announcementCreate}" text="Create"/>
+            </div>
+            <div class="{style.titleN}">Reported Skills</div>
+            <g:HTMLPanel ui:field="skills"/>
+            <div class="{style.titleN}">Reported Assignments</div>
+            <g:HTMLPanel ui:field="assignments"/>
+            <div class="{style.titleN}">Reported Activities</div>
+            <g:HTMLPanel ui:field="activities"/>
+            <div class="{style.titleN}">Registered Users: <g:Label ui:field="userCount" text="..." styleName="inline {style.userCount}"/></div>
+            <g:HTMLPanel ui:field="users"/>
+            <div class="{style.titleN}">Create Test Person</div>
+            <div class="{style.testPerson}">
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td><g:TextBox ui:field="testPersonName"/></td>
+                    </tr>
+                    <tr>
+                        <td>Picture:</td>
+                        <td><f:FileUploadV ui:field="testPersonPicture" styleName="floatLeft {style.uploadPicture}"/></td>
+                    </tr>
+                </table>
+                <g:Button ui:field="testPersonCreate" styleName="button {style.testPersonCreate}" text="Create"/>
+            </div>
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder>

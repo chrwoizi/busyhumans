@@ -1,0 +1,199 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:p='urn:import:com.c5000.mastery.client.components.picture'>
+    <ui:style>
+
+        .aboutOuter {
+            width: 100%;
+            margin-left: -170px;
+        }
+
+        .aboutInner {
+            margin-left: 170px;
+        }
+
+        .name {
+            font-size: 18pt;
+            font-weight: bold;
+            margin: 10px 0 12px 0;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .stats {
+            padding-right: 2px;
+        }
+
+        .statsRight {
+            margin-left: 100px;
+            padding-top: 10px;
+        }
+
+        .badge {
+            position: relative;
+            width: 80px;
+            height: 90px;
+            background-image: url('/static/badge.png');
+        }
+
+        .levelOuter {
+            height: 100%;
+            width: 100%;
+            display: table;
+        }
+
+        .levelLabel {
+            position: absolute;
+            left: -1px;
+            top: 13px;
+            width: 100%;
+            font-size: 8pt;
+            font-weight: bold;
+            text-align: center;
+            cursor: default;
+            color: #888;
+        }
+
+        .level {
+            display: table-cell;
+            vertical-align: middle;
+            padding-top: 12px;
+            font-size: 18pt;
+            font-weight: bold;
+            text-align: center;
+            cursor: default;
+        }
+
+        .levelProgressOuter {
+            position: relative;
+            width: 240px;
+        }
+
+        .xpInner {
+            position: absolute;
+            left: 50%;
+        }
+
+        .xp {
+            margin-left: -50%;
+            font-size: 10pt;
+            white-space: nowrap;
+            font-weight: bold;
+            cursor: default;
+        }
+
+        .progressBar {
+            width: 100%;
+            height: 18px;
+            border: 1px solid #888;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress {
+            width: 50%;
+            height: 100%;
+            background-color: #B8D8FF;
+        }
+
+        .antiProgress {
+            width: 50%;
+            height: 100%;
+            background-color: #FFF;
+        }
+
+        .xpLeftBound {
+            position: absolute;
+            top: 3px;
+            left: 4px;
+            color: #888;
+            cursor: default;
+        }
+
+        .xpRightBound {
+            position: absolute;
+            top: 3px;
+            right: 4px;
+            color: #888;
+            cursor: default;
+        }
+
+        .statsTable {
+            width: 240px;
+            margin-top: 6px;
+        }
+
+        .stat {
+            text-align: right;
+        }
+
+        .founder {
+            margin: 20px 4px 0 0;
+        }
+
+        .founderImage {
+            margin-left: 2px;
+        }
+
+        .founderLabel {
+            margin-top: -7px;
+            font-weight: bold;
+            font-size: 10pt;
+            color: #888;
+            cursor: default;
+        }
+
+    </ui:style>
+    <g:HTMLPanel>
+        <div class="floatRight {style.aboutOuter}">
+            <div class="{style.aboutInner}">
+                <g:Label ui:field="name" styleName="{style.name}"/>
+                <div class="{style.stats}">
+                    <div class="floatLeft {style.badge}">
+                        <div class="{style.levelLabel}">Level</div>
+                        <div class="{style.levelOuter}">
+                            <g:Label ui:field="level" styleName="{style.level}"/>
+                        </div>
+                    </div>
+                    <g:HTMLPanel ui:field="founder" styleName="floatRight {style.founder}" visible="false" title="This person has helped to get Busy Humans going by creating one of the very first assignments.">
+                        <g:Image styleName="{style.founderImage}" url="/static/founder.png"/>
+                        <div class="{style.founderLabel}">FOUNDER</div>
+                    </g:HTMLPanel>
+                    <div class="{style.statsRight}">
+                        <div class="{style.levelProgressOuter}">
+                            <div class="{style.progressBar}">
+                                <div class="{style.xpInner}">
+                                    <g:Label ui:field="xp" styleName="{style.xp}"/>
+                                </div>
+                                <g:Label ui:field="levelXp" styleName="{style.xpLeftBound}"/>
+                                <g:Label ui:field="nextLevelXp" styleName="{style.xpRightBound}"/>
+                                <g:SimplePanel ui:field="levelProgress" styleName="floatLeft {style.progress}"/>
+                                <g:SimplePanel ui:field="levelAntiProgress" styleName="floatLeft {style.antiProgress}"/>
+                                <div class="stopFloat"/>
+                            </div>
+                        </div>
+                        <table cellspacing="0" class="{style.statsTable}">
+                            <tr>
+                                <td>Joined Busy Humans:</td>
+                                <td><g:Label ui:field="joined" styleName="{style.stat}" /></td>
+                            </tr>
+                            <tr>
+                                <td>Created assignments:</td>
+                                <td><g:Label ui:field="created" styleName="{style.stat}" /></td>
+                            </tr>
+                            <tr>
+                                <td>Completed assignments:</td>
+                                <td><g:Label ui:field="completed" styleName="{style.stat}" /></td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="stopFloat"/>
+                </div>
+            </div>
+        </div>
+        <p:PictureV ui:field="picture"/>
+        <div class="stopFloat"/>
+    </g:HTMLPanel>
+</ui:UiBinder> 

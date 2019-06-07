@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='mastery'>
+
+    <inherits name='com.google.gwt.user.User'/>
+    <inherits name="gwtupload.GWTUpload"/>
+
+    <entry-point class='com.c5000.mastery.client.MasteryEP'/>
+
+    <!-- paths for translatable code -->
+    <source path='client'/>
+    <source path='shared'/>
+
+    <!-- inject main view from business project to engine project -->
+    <replace-with class="com.c5000.mastery.client.framework.MainV">
+        <when-type-is class="com.c5000.mastery.client.framework.IMainV"/>
+    </replace-with>
+
+</module>

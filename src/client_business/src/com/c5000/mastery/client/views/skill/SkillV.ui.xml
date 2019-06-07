@@ -1,0 +1,99 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:p='urn:import:com.c5000.mastery.client.components.picture'
+             xmlns:c='urn:import:com.c5000.mastery.client.components'>
+    <ui:style>
+
+        .aboutOuter {
+            width: 100%;
+            margin-left: -122px;
+        }
+
+        .aboutInner {
+            margin: 6px 0 0 132px;
+        }
+
+        .title {
+            margin-bottom: 10px;
+            font-size: 16pt;
+        }
+
+        .description {
+            font-size: 10pt;
+            overflow: hidden;
+        }
+
+        .descriptionLicense {
+            text-align: right;
+        }
+
+        .license {
+            color: #888;
+        }
+
+        .authorName > a {
+            color: #888;
+        }
+
+        .abuse {
+            height: 18px;
+            margin-right: 6px;
+            padding: 2px 2px 0px 2px;
+        }
+
+        .abuseReportCount {
+            padding-top: 2px;
+        }
+
+        .delete {
+            width: 22px;
+            height: 22px;
+            margin-right: 6px;
+            background-image: url('/static/trash.png');
+            background-repeat: no-repeat;
+            background-position: 2px;
+        }
+
+        .buttons {
+            margin: 2px 0 0 6px;
+        }
+
+    </ui:style>
+    <g:HTMLPanel>
+        <div class="floatRight {style.aboutOuter}">
+            <div class="{style.aboutInner}">
+                <div>
+                    <g:Label ui:field="title" styleName="floatLeft {style.title}"/>
+                    <div class="floatLeft {style.buttons}">
+                        <g:Button ui:field="delete" styleName="button floatLeft {style.delete}" title="Delete the category."/>
+                        <g:ToggleButton ui:field="abuse" styleName="toggleButton floatLeft {style.abuse}" title="Please activate this flag if the category contains illegal or unethic material.">
+                            <g:upFace>
+                                <img src="/static/abuse-off.png" alt="gray flag"/>
+                            </g:upFace>
+                            <g:downFace>
+                                <img src="/static/abuse-on.png" alt="red flag"/>
+                            </g:downFace>
+                        </g:ToggleButton>
+                        <c:WidgetCustomButton ui:field="clearAbuse" styleName="button floatLeft {style.abuse}" title="Delete all abuse reports." visible="false">
+                            <c:upFace>
+                                <g:HTMLPanel>
+                                    <img src="/static/abuse-on.png" alt="red flag" class="floatLeft"/>
+                                    <g:Label ui:field="abuseReportCount" styleName="floatLeft {style.abuseReportCount}"/>
+                                </g:HTMLPanel>
+                            </c:upFace>
+                        </c:WidgetCustomButton>
+                    </div>
+                    <div class="stopFloat"/>
+                </div>
+                <p ui:field="description" class="{style.description}"/>
+                <g:HTMLPanel ui:field="descriptionLicense" styleName="{style.descriptionLicense}">
+                    <span class="{style.license}">source:</span>
+                    <g:Anchor ui:field="descriptionLicenseAnchor" target="_blank" styleName="{style.license}"/>
+                </g:HTMLPanel>
+            </div>
+        </div>
+        <p:PictureV ui:field="picture"/>
+        <div class="stopFloat"/>
+    </g:HTMLPanel>
+</ui:UiBinder>

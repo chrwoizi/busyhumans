@@ -1,0 +1,71 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:u='urn:import:com.c5000.mastery.client.components.upload'
+             xmlns:p='urn:import:com.c5000.mastery.client.components.picture'>
+    <ui:style>
+        .title {
+            margin: 0 0 14px 0;
+            font-size: 16pt;
+        }
+
+        .error {
+            color: #FF0000;
+        }
+
+        .register {
+            width: 250px;
+            height: 50px;
+            margin-top: 10px;
+        }
+
+        .subtitle {
+            margin: 10px 0 5px 0;
+            font-size: 10pt;
+            font-weight: bold;
+        }
+    </ui:style>
+    <g:HTMLPanel>
+        <div class="{style.title}">Register</div>
+        <g:HTMLPanel ui:field="form" visible="false">
+            <div class="{style.subtitle}">Account information:</div>
+            <table>
+                <tr>
+                    <td>Email address:</td>
+                    <td><g:TextBox ui:field="email"/></td>
+                    <td><g:Label ui:field="emailError" styleName="{style.error}"/></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><g:PasswordTextBox ui:field="password1"/></td>
+                    <td/>
+                </tr>
+                <tr>
+                    <td>Repeat password:</td>
+                    <td><g:PasswordTextBox ui:field="password2"/></td>
+                    <td><g:Label ui:field="passwordError" styleName="{style.error}"/></td>
+                </tr>
+            </table>
+            <div class="{style.subtitle}">Please type in these words:</div>
+            <div id="recaptcha"/>
+            <div class="{style.subtitle}">Personal information:</div>
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><g:TextBox ui:field="name"/></td>
+                    <td><g:Label ui:field="nameError" styleName="{style.error}"/></td>
+                </tr>
+                <tr>
+                    <td>Picture:</td>
+                    <td><u:FileUploadV ui:field="pictureUpload"/></td>
+                    <td><g:Label ui:field="pictureError" styleName="{style.error}"/></td>
+                </tr>
+                <tr>
+                    <td/>
+                    <td colspan="2"><p:PictureV ui:field="picture"/></td>
+                </tr>
+            </table>
+            <g:Button ui:field="register" text="Register" styleName="button {style.register}"/>
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder>

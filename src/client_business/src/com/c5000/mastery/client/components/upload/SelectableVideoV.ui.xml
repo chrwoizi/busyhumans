@@ -1,0 +1,21 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+        >
+    <ui:style>
+
+        .outer {
+            margin-right: 4px;
+            cursor: pointer;
+        }
+
+        .picture {
+            height: 90px;
+            border: 1px solid #888;
+        }
+
+    </ui:style>
+    <g:FocusPanel ui:field="outer" styleName="{style.outer}">
+        <g:Image ui:field="picture" styleName="{style.picture}"/>
+    </g:FocusPanel>
+</ui:UiBinder>

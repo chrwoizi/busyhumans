@@ -1,0 +1,1 @@
+mklink /J "C:\Program Files\Tomcat\webapps\solr\home" "C:\Projekte\Mastery\solr_home"

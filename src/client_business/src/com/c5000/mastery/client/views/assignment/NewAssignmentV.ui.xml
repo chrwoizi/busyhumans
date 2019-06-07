@@ -1,0 +1,126 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:myS='urn:import:com.c5000.mastery.client.views.skill'
+             xmlns:p='urn:import:com.c5000.mastery.client.components.picture'>
+    <ui:style>
+
+        .denied {
+            color: #FF5555;
+        }
+
+        .aboutOuter {
+            width: 100%;
+            margin-left: -122px;
+        }
+
+        .aboutInner {
+            margin-left: 132px;
+        }
+
+        .titleCaption {
+        }
+
+        .validation {
+            color: #FF5555;
+            font-weight: bold;
+        }
+
+        .title {
+            width: 330px;
+            font-size: 16pt;
+        }
+
+        .descriptionOuter {
+            margin-top: 4px;
+        }
+
+        .descriptionCaption {
+        }
+
+        .description {
+            width: 465px;
+            font-size: 10pt;
+        }
+
+        .skillCaption {
+            font-size: 10pt;
+        }
+
+        .skill {
+            margin: 10px 0 0 30px;
+        }
+
+        .rewardAmountPanel {
+            text-align: right;
+        }
+
+        .rewardCaption {
+            text-align: left;
+        }
+
+        .reward {
+            font-size: 16pt;
+            text-align: right;
+        }
+
+        .rewardUnit {
+            font-size: 16pt;
+        }
+
+        .createButton {
+            width: 100%;
+            height: 50px;
+            margin: 26px 0 0 0;
+            font-size: 12pt;
+        }
+
+        .skillPanel {
+            margin: 10px 0 0 0;
+        }
+
+    </ui:style>
+    <g:HTMLPanel>
+        <g:HTMLPanel ui:field="granted" visible="false">
+            <div>
+                <div class="floatRight {style.aboutOuter}">
+                    <div class="{style.aboutInner}">
+                        <div>
+                            <div class="floatRight">
+                                <div class="floatRight {style.rewardAmountPanel}">
+                                    <div class="{style.rewardCaption}">Reward:</div>
+                                    <g:Label ui:field="reward" styleName="inline {style.reward}"/>
+                                    <div class="inline {style.rewardUnit}">XP</div>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="{style.titleCaption}">Title:</span>
+                                <g:Label ui:field="titleValidation" styleName="inline {style.validation}"/>
+                                <div/>
+                                <g:TextBox ui:field="title" styleName="{style.title}"/>
+                            </div>
+                        </div>
+                        <div class="{style.descriptionOuter}">
+                            <span class="{style.descriptionCaption}">Description:</span>
+                            <g:Label ui:field="descriptionValidation" styleName="inline {style.validation}"/>
+                            <div/>
+                            <g:TextArea ui:field="description" styleName="{style.description}"/>
+                        </div>
+                    </div>
+                </div>
+                <p:PictureV ui:field="skillPicture"/>
+                <div class="stopFloat"/>
+            </div>
+            <div class="{style.skillPanel}">
+                <span class="{style.skillCaption}">Category:</span>
+                <g:Label ui:field="skillValidation" styleName="inline {style.validation}"/>
+                <br/>
+                <myS:SkillSelectionV ui:field="skillSelection" styleName="{style.skill}"/>
+            </div>
+            <g:Button ui:field="create" text="Create" styleName="button {style.createButton}"/>
+        </g:HTMLPanel>
+        <g:HTMLPanel ui:field="denied" styleName="{style.denied}" visible="false">
+            You cannot create an assignment right now. Please try again later.
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder>

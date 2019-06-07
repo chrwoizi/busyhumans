@@ -1,0 +1,77 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+    <ui:style>
+        .title {
+            margin: 0 0 14px 0;
+            font-size: 16pt;
+        }
+        .subtitle {
+            margin: 24px 0 10px 0;
+            font-size: 16pt;
+        }
+        .content {
+            font-size: 12pt;
+        }
+        .content > b {
+            font-size: 12pt;
+        }
+        .content > i {
+            font-size: 12pt;
+        }
+        .content > a {
+            font-size: 12pt;
+            color: #000;
+        }
+    </ui:style>
+    <g:HTMLPanel>
+        <div class="{style.title}">Welcome to Busy Humans!</div>
+        <div class="{style.content}">
+            The place where you can share your activities with the world!<br/>
+            <br/>
+            Have you ever asked yourself:
+        </div>
+        <ul>
+            <li class="{style.content}">
+                <i>Is anybody out there who would like to do _______?</i>
+            </li>
+            <li class="{style.content}">
+                <i>Has anybody ever done _______?</i>
+            </li>
+            <li class="{style.content}">
+                <i>Who is the best at _______?</i>
+            </li>
+            <li class="{style.content}">
+                <i>I am bored. What could I do?</i>
+            </li>
+        </ul>
+        <div class="{style.content}">Busy Humans has all the answers, so take a look around and get busy :)</div>
+        <div class="{style.subtitle}">How does it work?</div>
+        <ul>
+            <li class="{style.content}">
+                <b>Step 1: Login!</b> Use the Login button in the top right-hand corner to create your personal profile.
+            </li>
+            <br/>
+            <li class="{style.content}">
+                <b>Step 2: Get busy!</b> Click the <a href="#discover">Discover</a>-Tab to browse existing assignments.
+                If you like an assignment and think that you could perform the activity, go ahead and do it.
+                Take pictures or videos to share your experience.
+            </li>
+            <br/>
+            <li class="{style.content}">
+                <b>Step 3: Get ratings!</b> People will rate your activity.
+                Three days later, the ratings will be converted to experience points (XP) which are added to your account.
+                Your total XP balance is used to determine your place in the worldwide rankings and it influences the popularity of your own assignments.
+            </li>
+            <br/>
+            <li class="{style.content}">
+                <b>Step 4: Create assignments!</b> Use the the <a href="#create">Create</a>-Tab to share your ideas.
+                Your assignments will start with a certain reward (XP) based on your current level.
+                Assignments are always sorted by reward, so it's important to reach a high reward if you want your ideas to be popuplar.
+                Luckily, other users can boost your assignments with their own reward value if they like your idea,
+                so you can start creating even if you're still at level 1. Also, creating really pays off:
+                You get 10% of each reward that is issued to people who complete your assignment.
+            </li>
+        </ul>
+    </g:HTMLPanel>
+</ui:UiBinder>

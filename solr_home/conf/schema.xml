@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<schema name="generic" version="3.1">
+
+    <types>
+        <fieldType name="uuid" class="solr.UUIDField"/>
+        <fieldType name="string" class="solr.StrField"/>
+        <fieldType name="boolean" class="solr.BoolField"/>
+        <fieldtype name="binary" class="solr.BinaryField"/>
+        <fieldType name="int" class="solr.IntField"/>
+        <fieldType name="float" class="solr.FloatField"/>
+        <fieldType name="long" class="solr.LongField"/>
+        <fieldType name="double" class="solr.DoubleField"/>
+        <fieldType name="date" class="solr.DateField"/>
+        <fieldType name="random" class="solr.RandomSortField" indexed="true"/>
+        <fieldType name="text" class="solr.TextField">
+            <analyzer type="index">
+                <tokenizer class="solr.LowerCaseTokenizerFactory"/>
+                <filter class="solr.NGramFilterFactory" minGramSize="1" maxGramSize="15"/>
+            </analyzer>
+            <analyzer type="query">
+                <tokenizer class="solr.LowerCaseTokenizerFactory"/>
+            </analyzer>
+        </fieldType>
+    </types>
+
+    <fields>
+        <field name="key" type="uuid" indexed="true" stored="true" required="true"/>
+        <field name="text" type="text" indexed="true" stored="true"/>
+        <dynamicField name="uuid_*" type="uuid" indexed="true" stored="true"/>
+        <dynamicField name="uuid_multi_*" type="uuid" indexed="true" stored="true" multiValued="true"/>
+        <dynamicField name="int_*" type="int" indexed="true" stored="true"/>
+        <dynamicField name="string_*" type="string" indexed="true" stored="true"/>
+        <dynamicField name="string_multi_*" type="string" indexed="true" stored="true" multiValued="true"/>
+        <dynamicField name="long_*" type="long" indexed="true" stored="true"/>
+        <dynamicField name="text_*" type="text" indexed="true" stored="true"/>
+        <dynamicField name="text_multi_*" type="text" indexed="true" stored="true" multiValued="true"/>
+        <dynamicField name="bool_*" type="boolean" indexed="true" stored="true"/>
+        <dynamicField name="loat*" type="float" indexed="true" stored="true"/>
+        <dynamicField name="double_*" type="double" indexed="true" stored="true"/>
+        <dynamicField name="date_*" type="date" indexed="true" stored="true"/>
+        <dynamicField name="random_*" type="random"/>
+    </fields>
+
+    <uniqueKey>key</uniqueKey>
+
+</schema>

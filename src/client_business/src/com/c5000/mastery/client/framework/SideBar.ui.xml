@@ -1,0 +1,86 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+    xmlns:s="urn:import:com.c5000.mastery.client.views.search"
+    xmlns:p="urn:import:com.c5000.mastery.client.views.person"
+    xmlns:a="urn:import:com.c5000.mastery.client.views.announcement"
+    xmlns:t="urn:import:com.c5000.mastery.client.components.tagcloud"
+    xmlns:ac="urn:import:com.c5000.mastery.client.views.account">
+	<ui:style>
+        @eval tpadding com.c5000.mastery.client.framework.SideBar.PADDING_TOP_CSS;
+        @eval vpadding com.c5000.mastery.client.framework.SideBar.PADDING_CSS;
+        @eval width com.c5000.mastery.client.framework.SideBar.WIDTH_CSS;
+
+        .outer {
+            width: width;
+            padding-top: tpadding;
+            background-color: #FAFAFA;
+        }
+
+        .inner {
+            padding: 0 vpadding;
+        }
+
+        .border {
+            margin-top: 10px;
+            padding-top: 16px;
+            border-top: 1px solid #DDD;
+        }
+
+        .bottomBorder {
+            margin-bottom: 10px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #DDD;
+        }
+
+        .tagCloud {
+            padding: 10px 0;
+            text-align: justify;
+        }
+
+        .tagCloud a {
+            margin-right: 5px;
+            padding: 2px;
+            border-radius: 3px;
+            text-decoration: none;
+            font-weight: bold;
+            white-space: nowrap;
+            color: #000;
+            outline: none;
+        }
+
+        .tagCloud a:hover {
+            background-color: #D9E3FB;
+        }
+
+        .caption {
+            font-size: 12pt;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .social {
+            height: 64px;
+        }
+
+    </ui:style>
+    <g:HTMLPanel styleName="floatRight {style.outer}">
+        <g:HTMLPanel styleName="{style.inner} {style.bottomBorder} {style.social}" ui:field="social"/>
+        <g:HTMLPanel styleName="{style.inner} {style.bottomBorder}" ui:field="email" visible="false">
+            <ac:EmailV/>
+        </g:HTMLPanel>
+        <g:HTMLPanel styleName="{style.inner} {style.bottomBorder}" ui:field="announcements" visible="false">
+            <a:AnnouncementsV/>
+        </g:HTMLPanel>
+        <g:HTMLPanel styleName="{style.inner}">
+            <s:SearchV/>
+        </g:HTMLPanel>
+        <g:HTMLPanel styleName="{style.inner} {style.border}">
+            <div class="{style.caption}">Categories:</div>
+            <t:TagCloudV ui:field="categories" styleName="{style.tagCloud}"/>
+        </g:HTMLPanel>
+        <g:HTMLPanel styleName="{style.inner} {style.border}">
+            <p:RankingsV/>
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder> 

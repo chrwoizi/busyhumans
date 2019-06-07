@@ -1,0 +1,25 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+    <ui:style>
+
+        .outer {
+            position: absolute;
+            border: 1px solid #888;
+            background-color: #FFF;
+            border-radius: 5px;
+            padding: 6px;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+    </ui:style>
+    <g:FocusPanel ui:field="outer" styleName="{style.outer}">
+        <g:HTMLPanel>
+            <span class="{style.nowrap}">Picture by: </span><g:Anchor ui:field="authorUrl" styleName="{style.nowrap}"/>
+            <span class="{style.nowrap}">License: </span><g:Anchor ui:field="licenseUrl" styleName="{style.nowrap}"/>
+        </g:HTMLPanel>
+    </g:FocusPanel>
+</ui:UiBinder>

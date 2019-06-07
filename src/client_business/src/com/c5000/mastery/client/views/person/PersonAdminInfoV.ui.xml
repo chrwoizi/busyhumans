@@ -1,0 +1,43 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+        >
+    <ui:style>
+
+        .name {
+            font-size: 10pt;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .name > a {
+            font-size: 10pt;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .stat {
+            margin-right: 10px;
+        }
+
+        .outer {
+            margin-bottom: 10px;
+        }
+
+    </ui:style>
+    <g:HTMLPanel styleName="{style.outer}">
+        <g:Hyperlink ui:field="name" styleName="{style.name}"/>
+        <table>
+            <tr>
+                <td><g:Label ui:field="auth" styleName="{style.stat}"/></td>
+                <td><g:Label ui:field="google" styleName="{style.stat}"/></td>
+                <td><g:Label ui:field="email" styleName="{style.stat}"/></td>
+                <td><g:Label ui:field="joined" styleName="{style.stat}"/></td>
+                <td><g:Label ui:field="login" styleName="{style.stat}"/></td>
+                <td><g:Label ui:field="score" styleName="{style.stat}"/></td>
+            </tr>
+        </table>
+    </g:HTMLPanel>
+</ui:UiBinder> 

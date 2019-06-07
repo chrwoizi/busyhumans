@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+        >
+    <ui:style>
+
+        .outer {
+            width: 100%;
+        }
+
+        .recordingText {
+            padding-top: 6px;
+            font-size: 8pt;
+            text-align: center;
+            color: #888;
+        }
+
+        .cancel {
+            height: 22px;
+            padding: 0 6px;
+            margin-left: 10px;
+        }
+
+    </ui:style>
+    <g:HTMLPanel ui:field="outer" styleName="{style.outer}">
+        <g:HTMLPanel ui:field="inner" styleName="stretch" visible="false">
+            <div class="floatLeft {style.recordingText}">Waiting for recorded video on your YouTube channel...</div>
+            <g:Button ui:field="cancel" text="Cancel" styleName="button floatLeft {style.cancel}"/>
+            <div class="stopFloat"/>
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder>

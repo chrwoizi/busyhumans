@@ -1,0 +1,15 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+    </ui:style>
+    <g:HTMLPanel>
+        <div ui:field="toolbox" class="addthis_toolbox addthis_default_style" style="float: left">
+            <a ui:field="facebook" class="addthis_button_facebook_like"/>
+            <a ui:field="twitter" class="addthis_button_tweet"/>
+            <a ui:field="googleplus" class="addthis_button_google_plusone"/>
+        </div>
+        <a ui:field="share" style="float: left"/>
+        <div class="stopFloat" />
+    </g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,41 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:a='urn:import:com.c5000.mastery.client.views'>
+    <ui:style>
+
+        .title {
+            margin: 0 0 14px 0;
+            font-size: 16pt;
+            font-weight: bold;
+        }
+
+        .sortBy {
+            margin-bottom: 20px;
+        }
+
+        .sortByLabel {
+            font-size: 12pt;
+        }
+
+        .sortByOption {
+            margin-left: 10px;
+        }
+
+        .sortByOption > label {
+            font-size: 10pt;
+        }
+
+    </ui:style>
+    <g:HTMLPanel>
+        <h1 class="{style.title}">Available assignments:</h1>
+        <div class="{style.sortBy}">
+            <span class="floatLeft {style.sortByLabel}">Sort by:</span>
+            <g:RadioButton ui:field="sortByLatest" name="sortBy" text="latest assignments" styleName="floatLeft {style.sortByOption}"/>
+            <g:RadioButton ui:field="sortByActivity" name="sortBy" text="latest activity" checked="true" styleName="floatLeft {style.sortByOption}"/>
+            <g:RadioButton ui:field="sortByReward" name="sortBy" text="highest reward" styleName="floatLeft {style.sortByOption}"/>
+            <div class="stopFloat"/>
+        </div>
+        <a:LazyListV ui:field="assignments"/>
+    </g:HTMLPanel>
+</ui:UiBinder>

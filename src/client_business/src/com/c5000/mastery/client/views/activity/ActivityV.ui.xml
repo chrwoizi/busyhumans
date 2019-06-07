@@ -1,0 +1,177 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:c='urn:import:com.c5000.mastery.client.components'
+             xmlns:p='urn:import:com.c5000.mastery.client.components.picture'>
+    <ui:style>
+
+        .outer {
+            padding-bottom: 10px;
+            position: relative;
+        }
+
+        .buttons {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .pictureInner {
+            width: 52px;
+            height: 52px;
+            margin-right: 10px;
+        }
+
+        .authorName {
+            padding-top: 2px;
+        }
+
+        .authorName > a {
+            color: #000000;
+        }
+
+        .reward {
+            color: #888;
+            margin-bottom: 6px;
+        }
+
+        .details1Outer {
+            width: 100%;
+        }
+
+        .details2Inner {
+            margin-left: 62px;
+        }
+
+        .contentPanel {
+            width: 400px;
+        }
+
+        .abuse {
+            height: 18px;
+            padding: 2px 2px 0px 2px;
+        }
+
+        .clearAbuse {
+            height: 18px;
+            margin-right: 6px;
+            padding: 2px 2px 0px 2px;
+        }
+
+        .abuseReportCount {
+            padding-top: 2px;
+        }
+
+        .delete {
+            width: 22px;
+            height: 22px;
+            background-image: url('/static/trash.png');
+            background-repeat: no-repeat;
+            background-position: 2px;
+        }
+
+        .ratingsOuter {
+            height: 22px;
+            margin-bottom: 6px;
+        }
+
+        .rate {
+            width: 20px;
+            height: 18px;
+            padding-top: 2px;
+        }
+
+        .ratings {
+            position: relative;
+            width: 40px;
+            height: 10px;
+            margin: 6px 4px 0 4px;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .netRating {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            text-align: center;
+            cursor: default;
+            font-size: 6pt;
+            font-weight: bold;
+            color: #FFF;
+        }
+
+        .likes {
+            height: 22px;
+            background-color: #40D010;
+        }
+
+        .dislikes {
+            height: 22px;
+            background-color: #D04010;
+        }
+
+    </ui:style>
+    <g:HTMLPanel styleName="{style.outer}">
+        <div class="{style.details1Outer}">
+            <div class="floatLeft">
+                <p:PictureV ui:field="authorPicture" styleName="{style.pictureInner}"/>
+            </div>
+            <div class="{style.details2Inner}">
+                <g:Hyperlink ui:field="authorName" styleName="{style.authorName}"/>
+                <g:Label ui:field="reward" styleName="{style.reward}"/>
+                <g:HTMLPanel ui:field="contentPanel" styleName="{style.contentPanel}"/>
+            </div>
+        </div>
+        <div class="{style.buttons}">
+            <div class="{style.ratingsOuter}">
+                <div class="floatLeft">
+                    <g:ToggleButton ui:field="toggleLike" styleName="toggleButton {style.rate}">
+                        <g:upFace>
+                            <img src="/static/thumbs-up-off.png" alt=""/>
+                        </g:upFace>
+                        <g:downFace>
+                            <img src="/static/thumbs-up-on.png" alt=""/>
+                        </g:downFace>
+                    </g:ToggleButton>
+                </div>
+                <div class="floatLeft {style.ratings}">
+                    <g:SimplePanel ui:field="likes" styleName="floatLeft {style.likes}"/>
+                    <g:SimplePanel ui:field="dislikes" styleName="floatLeft {style.dislikes}"/>
+                    <g:Label ui:field="netRating" styleName="{style.netRating}"/>
+                </div>
+                <div class="floatLeft">
+                    <g:ToggleButton ui:field="toggleDislike" styleName="toggleButton {style.rate}">
+                        <g:upFace>
+                            <img src="/static/thumbs-down-off.png" alt=""/>
+                        </g:upFace>
+                        <g:downFace>
+                            <img src="/static/thumbs-down-on.png" alt=""/>
+                        </g:downFace>
+                    </g:ToggleButton>
+                </div>
+            </div>
+            <div>
+                <g:Button ui:field="delete" styleName="button floatRight {style.delete}" title="Delete the activity."/>
+                <g:ToggleButton ui:field="abuse" styleName="toggleButton floatRight {style.abuse}" title="Please activate this flag if the activity contains illegal or unethic material.">
+                    <g:upFace>
+                        <img src="/static/abuse-off.png" alt=""/>
+                    </g:upFace>
+                    <g:downFace>
+                        <img src="/static/abuse-on.png" alt=""/>
+                    </g:downFace>
+                </g:ToggleButton>
+                <c:WidgetCustomButton ui:field="clearAbuse" styleName="button floatRight {style.clearAbuse}" title="Delete all abuse reports." visible="false">
+                    <c:upFace>
+                        <g:HTMLPanel>
+                            <img src="/static/abuse-on.png" alt="red flag" class="floatLeft"/>
+                            <g:Label ui:field="abuseReportCount" styleName="floatLeft {style.abuseReportCount}"/>
+                        </g:HTMLPanel>
+                    </c:upFace>
+                </c:WidgetCustomButton>
+            </div>
+        </div>
+        <div class="stopFloat"/>
+    </g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,22 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:my="urn:import:com.c5000.mastery.client.framework">
+    <ui:style>
+
+        @eval width com.c5000.mastery.client.framework.MainV.WIDTH_CSS;
+        .middle {
+            width: width;
+            margin: 0 auto;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+            background-color: #FAFAFA;
+        }
+
+    </ui:style>
+    <g:HTMLPanel styleName="{style.middle}">
+        <my:Topbar ui:field="topbar"/>
+        <my:PageContainer ui:field="pageContainer"/>
+        <my:SideBar ui:field="sideBar"/>
+        <my:Bottom ui:field="bottom"/>
+    </g:HTMLPanel>
+</ui:UiBinder> 

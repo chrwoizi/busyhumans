@@ -1,0 +1,27 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+    <ui:style>
+
+        .title {
+            margin: 0 0 14px 0;
+            font-size: 16pt;
+            font-weight: bold;
+        }
+
+        .inner {
+        }
+
+        .innerAuth {
+            color: #888888;
+        }
+
+    </ui:style>
+    <g:HTMLPanel>
+        <g:Label ui:field="accessDenied" visible="true" styleName="{style.innerAuth}" text="Please login."/>
+        <g:HTMLPanel ui:field="accessGranted" visible="false">
+            <h1 class="{style.title}">Create a new assignment:</h1>
+            <g:HTMLPanel ui:field="newAssignmentPanel" styleName="{style.inner}"/>
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder>

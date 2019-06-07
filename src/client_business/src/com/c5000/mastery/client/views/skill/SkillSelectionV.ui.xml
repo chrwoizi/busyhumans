@@ -1,0 +1,80 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+    <ui:style>
+
+        .searchCaption {
+            font-size: 10pt;
+        }
+
+        .search {
+            width: 200px;
+            margin: 0 0 0 10px;
+            font-size: 12pt;
+        }
+
+        .existingSkills {
+            position: relative;
+            margin-top: 10px;
+            min-height: 50px;
+        }
+
+        .newSkill {
+            padding: 4px;
+        }
+
+        .selectedSkillPanel {
+        }
+
+        .enterTerm {
+            position: absolute;
+            top: 16px;
+            width: 100%;
+            text-align: center;
+            color: #888;
+        }
+
+        .noSkillsFound {
+            margin-top: 16px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .noSkillsFoundCaption {
+        }
+
+        .loading {
+            position: absolute;
+            top: 16px;
+            width: 100%;
+            text-align: center;
+            color: #888;
+        }
+
+        .changeButton {
+            height: 22px;
+            margin-bottom: 10px;
+            padding: 0 6px;
+        }
+
+    </ui:style>
+    <g:HTMLPanel>
+        <g:HTMLPanel ui:field="search">
+            <div class="inline {style.searchCaption}">Search:</div>
+            <g:TextBox ui:field="skill" styleName="{style.search}"/>
+            <div class="{style.existingSkills}">
+                <g:HTMLPanel ui:field="existingSkills"/>
+                <g:Label ui:field="enterTerm" text="Please enter a category title in the search box." styleName="{style.enterTerm}" visible="false"/>
+                <g:HTMLPanel ui:field="noSkillsFound" styleName="{style.noSkillsFound}" visible="false">
+                    <g:Label text="No category found by the exact search term." styleName="inline {style.noSkillsFoundCaption}"/>
+                    <g:Button ui:field="newSkill" styleName="button {style.newSkill}" text="Create New"/>
+                </g:HTMLPanel>
+                <g:Label ui:field="loading" text="Loading..." styleName="{style.loading}" visible="false"/>
+            </div>
+        </g:HTMLPanel>
+        <g:HTMLPanel ui:field="selected" visible="false">
+            <g:Button ui:field="changeButton" styleName="button {style.changeButton}" text="Change"/>
+            <g:HTMLPanel ui:field="selectedSkillPanel" styleName="{style.selectedSkillPanel}"/>
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder>

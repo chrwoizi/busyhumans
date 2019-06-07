@@ -1,0 +1,27 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+    <ui:style>
+        .title {
+            margin: 0 0 14px 0;
+            font-size: 16pt;
+        }
+        .caption {
+            font-weight: bold;
+        }
+    </ui:style>
+    <g:HTMLPanel>
+        <div class="{style.title}">Contact</div>
+        <div class="{style.caption}">Person in charge:</div>
+        <div>Christian Woizischke</div>
+        <br/>
+        <div class="{style.caption}">Mailing address:</div>
+        <div>Hinter der Masch 6</div>
+        <div>38114 Braunschweig</div>
+        <div>GERMANY</div>
+        <br/>
+        <div class="{style.caption}">Electronic contact:</div>
+        <div>info<img src="static/eddy.png" alt=""/>busyhumans.com</div>
+        <div>Tel: +49 531 1287337</div>
+    </g:HTMLPanel>
+</ui:UiBinder>

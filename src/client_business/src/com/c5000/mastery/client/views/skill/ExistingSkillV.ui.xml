@@ -1,0 +1,89 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+    <ui:style>
+
+        .outer {
+            padding-bottom: 10px;
+        }
+
+        .inner {
+            position: relative;
+        }
+
+        .focusPanel {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .mouseOverEffect {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #5588FF;
+            opacity: 0.2;
+        }
+
+        .details2Inner {
+            margin-left: 62px;
+        }
+
+        .pictureOuter {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border: 1px solid #DDD;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .pictureInner {
+            width: 50px;
+            height: auto;
+        }
+
+        .title {
+            padding-top: 6px;
+            font-size: 14pt;
+        }
+
+        .description {
+        }
+
+        .descriptionLicense {
+            text-align: right;
+        }
+
+        .license {
+            color: #888;
+        }
+
+
+    </ui:style>
+    <g:HTMLPanel styleName="{style.outer}">
+        <g:HTMLPanel styleName="{style.inner}">
+            <div class="floatLeft">
+                <div class="{style.pictureOuter}">
+                    <g:Image ui:field="picture" altText="" styleName="{style.pictureInner}"/>
+                </div>
+            </div>
+            <div class="{style.details2Inner}">
+                <div class="floatLeft">
+                    <g:Label ui:field="title" styleName="{style.title}"/>
+                    <g:Label ui:field="description" styleName="{style.description}"/>
+                    <g:HTMLPanel ui:field="descriptionLicense" styleName="{style.descriptionLicense}">
+                        <span class="{style.license}">source: </span>
+                        <g:Anchor ui:field="descriptionLicenseAnchor" target="_blank" styleName="{style.license}"/>
+                    </g:HTMLPanel>
+                </div>
+            </div>
+            <div class="stopFloat"/>
+            <g:HTMLPanel ui:field="mouseOverEffect" styleName="{style.mouseOverEffect}" visible="false"/>
+            <g:FocusPanel ui:field="focusPanel" styleName="{style.focusPanel}"/>
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,102 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+
+        .caption {
+            font-size: 12pt;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #E00000;
+        }
+
+        .title {
+            font-size: 10pt;
+            font-weight: bold;
+            color: #E00000;
+        }
+
+        .question {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .answer {
+            margin: 4px 0 0 10px;
+        }
+
+        .answerPrio {
+            margin: 4px 0 0 10px;
+            font-weight: bold;
+            color: #E00000;
+        }
+
+        .assign {
+            width: 70px;
+            height: 24px;
+            margin-top: 18px;
+        }
+
+        .label {
+            padding-right: 5px;
+            padding-top: 2px;
+            font-weight: bold;
+        }
+
+        .textbox {
+            width: 130px;
+        }
+
+        .textboxes {
+            margin-top: 20px;
+        }
+
+        .usernameHint {
+            margin: 4px 0 0 0;
+            color: #E00000;
+        }
+
+    </ui:style>
+    <g:HTMLPanel>
+        <div class="{style.caption}">
+            WARNING
+        </div>
+        <div class="{style.title}">
+            You haven't assigned an email address to your account yet.
+        </div>
+        <div class="{style.question}">
+            Why should I do that?
+        </div>
+        <g:HTMLPanel ui:field="passwordHint" styleName="{style.answerPrio}" visible="false">
+            You might lose access to your account, should you forget your password.
+        </g:HTMLPanel>
+        <div class="{style.answer}">
+            You will be notified when you receive a reward or when someone completes an assignment that you've subscribed to.
+        </div>
+        <div class="{style.question}">
+            Will I get spam to this address?
+        </div>
+        <div class="{style.answer}">
+            No! We neither give your email address to any third party, nor do we send emails that you don't want.<br/>
+            There will be a profile settings page where you can define exactly which notifications you wish to receive.
+        </div>
+        <table class="{style.textboxes}">
+            <tr>
+                <td class="{style.label}">Email:</td>
+                <td><g:TextBox ui:field="email" styleName="{style.textbox}"/></td>
+            </tr>
+            <tr>
+                <td class="{style.label}">Repeat:</td>
+                <td><g:TextBox ui:field="email2" styleName="{style.textbox}"/></td>
+            </tr>
+            <tr ui:field="passwordOuter" style="display:none;">
+                <td class="{style.label}">Password:</td>
+                <td><g:PasswordTextBox ui:field="password" styleName="{style.textbox}"/></td>
+            </tr>
+        </table>
+        <g:Button ui:field="assign" styleName="button {style.assign}" text="Assign"/>
+        <g:HTMLPanel ui:field="usernameHint" styleName="{style.usernameHint}" visible="false">
+            Once you set the email address, you can only use this email address to login. Your previous username becomes invalid.
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder> 
