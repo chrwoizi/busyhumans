@@ -1,8 +1,6 @@
 # Busy Humans #
 Busy Humans is a social media website that encourages people to learn and share real life skills through gamification. Users can define challenges for other users and reward their learning progress with virtual experience points.
 
-**Try the official online version: [busyhumans.woizischke.com](http://busyhumans.woizischke.com)**
-
 <details>
 <summary>How to install</summary>
 
