@@ -1,0 +1,687 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+    <ui:style>
+        .title {
+            margin: 0 0 14px 0;
+            font-size: 16pt;
+        }
+
+        .caption {
+            font-weight: bold;
+        }
+
+        .hint {
+            margin-bottom: 10px;
+            color: #E80000;
+        }
+    </ui:style>
+    <g:HTMLPanel>
+        <g:HTMLPanel ui:field="english" visible="false">
+            <div class="{style.title}">Terms of Usage and Privacy Policy</div>
+            <g:Label ui:field="hintEnglish" visible="false" styleName="{style.hint}" text="Please read carefully and click the agree button below."/>
+            <div class="{style.caption}">Preamble:</div>
+            <div>
+                The website provides access to public and protected content.
+                Protected content can only be viewed by users with a personal account.
+                Pages with public and/or protected content can collect anonymous data of usage behaviour through
+                logging of network traffic and through cookies.
+                The following document chapters describe the terms of usage and privacy policy for registered
+                users of this website.
+                The user is asked for explicit consent before the following parts come into effect.
+            </div>
+            <br/>
+            <div class="{style.caption}">1 - User Account:</div>
+            <div>
+                Some features of this service can only be used by registered users.
+                A registered user is a user with a personal user account.
+                A user account can be connected to a Facebook or Twitter account, depending on the used login method.
+                This connection will be established when the user first logs in via the Facebook or Twitter login button.
+            </div>
+            <br/>
+            <div class="{style.caption}">2 - Personal Data:</div>
+            <div>
+                The personal data collected by this website is categorized as follows:
+                <ul>
+                    <li>
+                        <b>User information:</b>
+                        Personal information that is entered on this website by the user
+                        (including but not limited to the name and the email address)
+                        and data that may be transmitted from Facebook or Twitter to this website.
+                        The nature of this transmitted data is described in the Facebook or Twitter dialog window when the user gives
+                        his/her consent to the usage of this data by this website.
+                    </li>
+                    <li>
+                        <b>Media content:</b>
+                        Texts, links and embedded or uploaded images and videos that are provided by the user.
+                    </li>
+                </ul>
+            </div>
+            <br/>
+            <div class="{style.caption}">3 - Collecting personal data from external services:</div>
+            <div>
+                This section only applies to users who use the Facebook or Twitter login method.
+                The user gives his/her consent to the transmitting of personal data from Facebook or Twitter to this website upon
+                the first login and upon possible future changes to the extent of the transmitted data via the according
+                Facebook or Twitter dialog window.
+                The transmitted data may be retrieved from Facebook or Twitter again in the future without any further consent as
+                long as the initial usage consent is not withdrawn.
+            </div>
+            <br/>
+            <div class="{style.caption}">4 - Usage of personal data:</div>
+            <div>
+                The user information may be published on this website unless the user explicitly withdraws his/her
+                consent.
+                Media content can be assigned to a license white it is being provided by the user.
+                Media content that is not assigned to a license will become property of this website.
+                The personal data is not transmitted to any third party.
+            </div>
+            <br/>
+            <div class="{style.caption}">5 - Withdrawal of the data usage consent:</div>
+            <div>
+                The user can withdraw the consent of data usage at any time without mentioning any
+                reasons, as long as the data is not assigned to a license that allows further publication.
+                In consequence of a withdrawal the access by any user to all parts of the personal data will be blocked.
+                In case a third party publishes personal data about any other person on this website, the affected
+                person can effect the deletion of this data.
+                A consent withdrawal or a deletion request must be directed at the service provider.
+                A deletion can only be performed if the requesting person is the affected person or acts on behalf
+                thereof and can provide a proof about that.
+            </div>
+            <br/>
+            <div class="{style.caption}">6 - Validity:</div>
+            <div>
+                The terms of usage and the privacy policy may be changed at any time.
+                Users with a user account will be notified about these changes and asked for consent on the next usage
+                of this website.
+                The access to this service will be blocked until the user explicitly declares his/her consent to the
+                changes.
+                An explicit refusal corresponds to a withdrawal of the data usage consent.
+                Should any parts of the terms of agreement and/or the privacy policy be invalid, other parts
+                will remain intact.
+            </div>
+        </g:HTMLPanel>
+        <g:HTMLPanel ui:field="german" visible="true">
+            <div class="{style.title}">Nutzungsbedingungen und Datenschutzerklärung</div>
+            <g:Label ui:field="hintGerman" visible="false" styleName="{style.hint}" text="Bitte aufmerksam lesen und mit dem Button am Ende der Seite bestätigen."/>
+            <h2>Nutzungsbedingungen</h2>
+            <h3>§1 Geltungsbereich</h3>
+            <ol>
+                <li>
+                    Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle
+                    Rechtsbeziehungen zwischen dem Betreiber und ihren Nutzern
+                    bzw. Kunden für die Beanspruchung des Online-Dienstes.
+                </li>
+                <li>
+                    Nutzer im Sinne dieser Allgemeinen Geschäftsbedingungen sind unbeschränkt
+                    geschäftsfähige, natürliche Personen, die gemäß § 13 BGB Verbraucher sind.
+                </li>
+                <li>
+                    Für alle gegenseitigen Ansprüche aus und im Zusammenhang mit einem
+                    Vertragsabschluss zwischen dem Nutzer und dem Betreiber gelten
+                    stets diese Allgemeinen Geschäftsbedingungen in ihrer zum Zeitpunkt des
+                    jeweiligen Vertragsabschlusses gültigen Fassung.
+                </li>
+            </ol>
+
+            <h3>§2 Regelungsgegenstand</h3>
+            <ol>
+                <li>
+                    Dies ist ein Online-Dienst, welcher Nutzerdaten und Medien speichert und diese anderen Nutzern zur Verfügung stellt.
+                </li>
+                <li>
+                    Durch die Eingabe der Nutzerdaten und Medien gewährt der Nutzer dem Betreiber das uneingeschränkte Recht,
+                    dise Daten zu speichern und zu veröffentlichen. Dieses Recht erlischt, sobald:
+                    <ol>
+                        <li>der Nutzer die Daten löscht,</li>
+                        <li>der Nutzer sein Profil löscht,</li>
+                        <li>der Betreiber das Profil des Nutzers löscht,</li>
+                        <li>oder der Nutzer das Recht schriftlich widerruft.</li>
+                    </ol>
+                </li>
+                <li>
+                    Der Betreiber erteilt dem Nutzer das einfache, nicht übertragbare
+                    Recht, diesen Online-Dienst zu nutzen.
+                </li>
+            </ol>
+
+            <h3>§3 Pflichten des Nutzers</h3>
+            <ol>
+                <li>
+                    Der Nutzer verpflichtet sich, im Rahmen der Anmeldung wahrheitsgemäße
+                    Angaben zu machen.
+                </li>
+                <li>Der Nutzer verpflichtet sich, seine Daten stets aktuell zu halten.</li>
+                <li>
+                    Der Nutzer verpflichtet sich, die Zugangsdaten nicht an Dritte weiterzugeben.
+                </li>
+                <li>
+                    Der Nutzer ist für die Inhalte seiner gespeicherten Dateien verantwortlich.
+                </li>
+                <li>
+                    Der Nutzer verpflichtet sich, keine Daten zu speichern, die gegen geltendes Recht verstoßen.
+                </li>
+            </ol>
+
+            <h3>§4 Vertragsschluss</h3>
+            <ol>
+                <li>
+                    Der Nutzer verpflichtet sich, den Online-Dienst nicht missbräuchlich zu
+                    nutzen.
+                </li>
+                <li>
+                    Dem Nutzer ist es untersagt, Zugangsdaten Dritter ohne deren Zustimmung
+                    einzugeben.
+                </li>
+                <li>
+                    Dem Nutzer ist es untersagt, den Betrieb wissentlich zu stören.
+                </li>
+                <li>
+                    Der Nutzer ist verpflichtet, festgestellte Fehler unverzüglich per E-Mail an
+                    den Betreiber zu melden.
+                </li>
+            </ol>
+
+            <h3>§5 Kündigung des Vertrags</h3>
+            <ol>
+                <li>
+                    Beide Parteien haben das Recht, den Vertrag jederzeit ohne die Angabe von
+                    Gründen zum Ende der angebrochenen Abrechnungsperiode zu kündigen.
+                </li>
+                <li>
+                    Eine Kündigung hat schriftlich mittels Brief oder E-Mail an den Betreiber oder durch Auswahl im Kundenbereich zu erfolgen.
+                </li>
+                <li>
+                    Nach Kündigung wird der Funktionsumfang reduziert.
+                </li>
+            </ol>
+
+            <h3>§6 Haftung</h3>
+            <ol>
+                <li>
+                    Schadensersatzansprüche durch den Nutzer wegen fahrlässiger
+                    Pflichtverletzung sind ausgeschlossen.
+                </li>
+                <li>
+                    Der Betreiber ergreift alle angemessenen wirtschaftlich
+                    vertretbaren Maßnahmen, um die Datensicherheit der gespeicherten Medien
+                    und Daten sicherzustellen.
+                </li>
+                <li>
+                    Der Betreiber haftet nicht für Störungen oder Verzögerungen in der
+                    Datenübertragung über das Internet, die der Betreiber nicht zu
+                    vertreten hat.
+                </li>
+            </ol>
+
+            <h3>§7 Verfügbarkeit</h3>
+            <ol>
+                <li>
+                    Der Betreiber stellt den Online-Dienst im
+                    Rahmen der technischen, rechtlichen und wirtschaftlichen Möglichkeiten zur
+                    Verfügung.
+                </li>
+                <li>
+                    Die Verfügbarkeit des Online-Dienstes in seiner
+                    Gesamtheit sowie einzelner Funktionen wird durch den Betreiber
+                    nicht garantiert.
+                </li>
+                <li>
+                    Die dauerhafte Speicherung der Nutzerdaten und Medien wird durch den Betreiber nicht garantiert.
+                </li>
+            </ol>
+
+            <h3>§8 Datenschutz</h3>
+            <ol>
+                <li>
+                    Gem. 28 BDSG (Bundesdatenschutzgesetz) macht der Betreiber darauf
+                    aufmerksam, dass die im Rahmen der Geschäftsabwicklung notwendigen Daten
+                    mittels einer EDV- Anlage gem. 33 BDSG verarbeitet und gespeichert werden.
+                </li>
+                <li>
+                    Der Betreiber speichert personenbezogene Daten. Dazu zählen
+                    Firmenname, Name, Vorname, E-Mail, die Adresse. Im Rahmen der Nutzung können
+                    (nach Beauftragung durch den Nutzer) Medien von Drittanbietern abgerufen
+                    und gespeichert werden, die ebenfalls personenbezongene Daten enthalten.
+                </li>
+                <li>
+                    Der Betreiber speichert die durch den Nutzer eingegebenen
+                    Zugangsdaten verschlüsselt und unzugänglich. Mitarbeitende des Betreibers sowie Dritte haben keine
+                    Einsicht in die entschlüsselten Zugangsdaten.
+                </li>
+                <li>
+                    Die erhobenen Daten werden vertraulich behandelt und nicht an Dritte
+                    weitergegeben. Der Betreiber verwendet diese Daten ausschließlich
+                    für die Erfüllung des Online-Dienstes und die direkte Kommunikation mit dem
+                    Nutzer.
+                </li>
+                <li>
+                    Der Nutzer stimmt der Erhebung, Verarbeitung und Nutzung personenbezogener
+                    Daten ausdrücklich zu. Ihm steht das Recht auf jederzeitigen Widerruf der
+                    Einwilligung mit Wirkung für die Zukunft zu.
+                </li>
+                <li>
+                    Der Nutzer erlaubt dem Betreiber, ihm die Daten unverschlüsselt per E-Mail zuzusenden.
+                </li>
+            </ol>
+
+            <h3>§9 Widerrufsbelehrung</h3>
+            <ol>
+                <li>
+                    Nutzer können Ihre Vertragserklärung innerhalb von zwei Wochen ohne Angabe
+                    von Gründen in Textform widerrufen. Die Frist beginnt nach Erhalt dieser
+                    Belehrung in Textform, jedoch nicht vor Inanspruchnahme der Dienstleistung
+                    beim Empfänger und auch nicht vor Erfüllung unserer Informationspflichten
+                    gemäß § 312c Abs. 2 BGB in Verbindung mit § 1 Abs. 1, 2 und 4 BGB-InfoV
+                    sowie unserer Pflichten gemäß § 312e Abs. 1 Satz 1 BGB in Verbindung mit § 3
+                    BGB-InfoV.
+                </li>
+                <li>
+                    Um Ihr Widerrufsrecht auszuüben, müssen Sie uns mittels einer eindeutigen
+                    Erklärung (z.B. ein mit der Post versandter Brief oder eine E-Mail )
+                    über Ihren Entschluss, diesen Vertrag zu widerrufen,
+                    informieren. Die Verwendung ist jedoch nicht vorgeschrieben. Zur Wahrung der
+                    Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des
+                    Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.
+                </li>
+            </ol>
+
+            <h3>§10 Widerrufsfolgen</h3>
+            <ol>
+                <li>
+                    Im Falle eines wirksamen Widerrufs sind die beiderseits empfangenen
+                    Leistungen zurück zu gewähren und ggf. gezogene Nutzungen (z. B. Zinsen)
+                    herauszugeben. Können Nutzer uns die empfangene Leistung ganz oder teilweise
+                    nicht oder nur in verschlechtertem Zustand zurückgewähren, müssen Nutzer uns
+                    insoweit ggf. Wertersatz leisten. Für eine durch die bestimmungsgemäße
+                    Ingebrauchnahme der Sache entstandene Verschlechterung müssen Nutzer keinen
+                    Wertersatz leisten. Paketversandfähige Sachen sind auf unsere Gefahr
+                    zurückzusenden. Verpflichtungen zur Erstattung von Zahlungen müssen
+                    innerhalb von 30 Tagen erfüllt werden. Die Frist beginnt für Nutzer mit der
+                    Absendung Ihrer Widerrufserklärung oder der Sache.
+                </li>
+                <li>
+                    Ein Widerrufsrecht besteht nach § 312b BGB nur gegenüber Verbrauchern.
+                    Sofern der Nutzer nicht Verbraucher i.S.d. § 13 BGB ist, besteht kein
+                    Widerrufsrecht. Regelungen über die Einräumung einer kostenlosen Testphase
+                    bleiben davon unberührt.
+                </li>
+                <li>
+                    Als Vertragserklärung gilt in jedem Fall ein Klick auf den Button
+                    „kostenpflichtig bestellen“ bei Eingabe der Zahlungsdaten.
+                </li>
+                <li>Ausschluss bzw. vorzeitiges Erlöschen des Widerrufsrechts</li>
+                <li>
+                    Das Widerrufsrecht erlischt vorzeitig bei Verträgen zur Lieferung von Waren,
+                    wenn diese nach der Lieferung aufgrund ihrer Beschaffenheit untrennbar mit
+                    anderen Gütern vermischt wurden.
+                </li>
+            </ol>
+
+            <h3>§11 Änderungen dieser AGB</h3>
+            <ol>
+                <li>
+                    Der Betreiber hat das Recht, die Bestimmungen bezüglich der zu
+                    erbringenden Leistung nach billigem Ermessen in Abwägung der technischen
+                    Erfordernisse und Marktgegebenheiten zu ändern, soweit dies für den Nutzer
+                    zumutbar ist.
+                </li>
+                <li>
+                    Änderungen dieser Allgemeinen Geschäftsbedingungen werden per E-Mail oder im
+                    Online Dienst veröffentlicht. Die Änderungen werden wirksam, sofern der
+                    Nutzer den jeweiligen Änderungen nicht spätestens 14 Tage nach Zugang der
+                    schriftlichen Änderungsmitteilung widerspricht.
+                </li>
+            </ol>
+
+            <h3>§12 Schlussbestimmungen</h3>
+            <ol>
+                <li>Es gilt das Recht der Bundesrepublik Deutschland.</li>
+                <li>
+                    Ist der Nutzer Kaufmann, juristische Person, juristische Person des
+                    öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen, ist
+                    ausschließlicher Gerichtsstand für alle Streitigkeiten aus diesem Vertrag
+                    der Geschäftssitz des Betreibers. Dasselbe gilt, wenn der Nutzer
+                    keinen allgemeinen Gerichtsstand in Deutschland hat oder Wohnsitz oder
+                    gewöhnlicher Aufenthalt im Zeitpunkt der Klageerhebung nicht bekannt sind.
+                </li>
+                <li>
+                    Im übrigen gilt § 306 BGB, der wie folgt lautet: 1. Sind Allgemeine
+                    Geschäftsbedingungen ganz oder teilweise nicht Vertragsbestandteil geworden
+                    oder unwirksam, so bleibt der Vertrag im übrigen wirksam. 2. Soweit die
+                    Bestimmungen nicht Vertragsbestandteil geworden oder unwirksam sind, richtet
+                    sich der Inhalt des Vertrags nach den gesetzlichen Vorschriften. 3. Der
+                    Vertrag ist unwirksam, wenn das Festhalten an ihm auch unter
+                    Berücksichtigung der nach Absatz 2 vorgesehenen Änderung eine unzumutbare
+                    Härte für eine Vertragspartei darstellen würde.
+                </li>
+            </ol>
+            <h2>Datenschutzerklärung</h2>
+            <div>
+                <p>
+                    Personenbezogene Daten (nachfolgend zumeist nur „Daten“ genannt) werden von
+                    uns nur im Rahmen der Erforderlichkeit sowie zum Zwecke der Bereitstellung
+                    eines funktionsfähigen und nutzerfreundlichen Internetauftritts, inklusive
+                    seiner Inhalte und der dort angebotenen Leistungen, verarbeitet.
+                </p>
+                <p>
+                    Gemäß Art. 4 Ziffer 1. der Verordnung (EU) 2016/679, also der
+                    Datenschutz-Grundverordnung (nachfolgend nur „DSGVO“ genannt), gilt als
+                    „Verarbeitung“ jeder mit oder ohne Hilfe automatisierter Verfahren
+                    ausgeführter Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit
+                    personenbezogenen Daten, wie das Erheben, das Erfassen, die Organisation,
+                    das Ordnen, die Speicherung, die Anpassung oder Veränderung, das Auslesen,
+                    das Abfragen, die Verwendung, die Offenlegung durch Übermittlung,
+                    Verbreitung oder eine andere Form der Bereitstellung, den Abgleich oder die
+                    Verknüpfung, die Einschränkung, das Löschen oder die Vernichtung.
+                </p>
+                <p>
+                    Mit der nachfolgenden Datenschutzerklärung informieren wir Sie insbesondere
+                    über Art, Umfang, Zweck, Dauer und Rechtsgrundlage der Verarbeitung
+                    personenbezogener Daten, soweit wir entweder allein oder gemeinsam mit
+                    anderen über die Zwecke und Mittel der Verarbeitung entscheiden. Zudem
+                    informieren wir Sie nachfolgend über die von uns zu Optimierungszwecken
+                    sowie zur Steigerung der Nutzungsqualität eingesetzten Fremdkomponenten,
+                    soweit hierdurch Dritte Daten in wiederum eigener Verantwortung verarbeiten.
+                </p>
+                <p>
+                    Unsere Datenschutzerklärung ist wie folgt gegliedert:
+                </p>
+                <p>
+                    I. Informationen über uns als Verantwortliche<br />II. Rechte der Nutzer und
+                    Betroffenen<br />III. Informationen zur Datenverarbeitung
+                </p>
+            </div>
+            <h3>I. Informationen über uns als Verantwortliche</h3>
+            <div>
+                <p>
+                    Verantwortlicher Anbieter dieses Internetauftritts im datenschutzrechtlichen
+                    Sinne ist:
+                </p>
+                <p>
+                    <span
+                    >Christian Woizischke, Software Engineering &amp; Consulting<br />31311 Uetze<br />Deutschland</span
+                    >
+                </p>
+                <p>
+                    <span
+                >E-Mail: busyhumans<img src="static/eddy.png" alt=""/>woizischke.com</span
+                >
+                </p>
+                <p>
+                    Datenschutzbeauftragte/r beim Anbieter ist:
+                </p>
+                <p>
+                    <span>Christian Woizischke&nbsp;</span>
+                </p>
+            </div>
+            <h3>II. Rechte der Nutzer und Betroffenen</h3>
+            <div>
+                <p>
+                    Mit Blick auf die nachfolgend noch näher beschriebene Datenverarbeitung
+                    haben die Nutzer und Betroffenen das Recht
+                </p>
+                <p>
+                    <p>
+                        auf Bestätigung, ob sie betreffende Daten verarbeitet werden, auf Auskunft
+                        über die verarbeiteten Daten, auf weitere Informationen über die
+                        Datenverarbeitung sowie auf Kopien der Daten (vgl. auch Art. 15 DSGVO);
+                    </p>
+                    <p>
+                        auf Berichtigung oder Vervollständigung unrichtiger bzw. unvollständiger
+                        Daten (vgl. auch Art. 16 DSGVO);
+                    </p>
+                    <p>
+                        auf unverzügliche Löschung der sie betreffenden Daten (vgl. auch Art. 17
+                        DSGVO), oder, alternativ, soweit eine weitere Verarbeitung gemäß Art. 17
+                        Abs. 3 DSGVO erforderlich ist, auf Einschränkung der Verarbeitung nach
+                        Maßgabe von Art. 18 DSGVO;
+                    </p>
+                    <p>
+                        auf Erhalt der sie betreffenden und von ihnen bereitgestellten Daten und
+                        auf Übermittlung dieser Daten an andere Anbieter/Verantwortliche (vgl.
+                        auch Art. 20 DSGVO);
+                    </p>
+                    <p>
+                        auf Beschwerde gegenüber der Aufsichtsbehörde, sofern sie der Ansicht
+                        sind, dass die sie betreffenden Daten durch den Anbieter unter Verstoß
+                        gegen datenschutzrechtliche Bestimmungen verarbeitet werden (vgl. auch
+                        Art. 77 DSGVO).
+                    </p>
+                </p>
+                <p>
+                    Darüber hinaus ist der Anbieter dazu verpflichtet, alle Empfänger, denen
+                    gegenüber Daten durch den Anbieter offengelegt worden sind, über jedwede
+                    Berichtigung oder Löschung von Daten oder die Einschränkung der
+                    Verarbeitung, die aufgrund der Artikel 16, 17 Abs. 1, 18 DSGVO erfolgt, zu
+                    unterrichten. Diese Verpflichtung besteht jedoch nicht, soweit diese
+                    Mitteilung unmöglich oder mit einem unverhältnismäßigen Aufwand verbunden
+                    ist. Unbeschadet dessen hat der Nutzer ein Recht auf Auskunft über diese
+                    Empfänger.
+                </p>
+                <p>
+                    <strong
+                    >Ebenfalls haben die Nutzer und Betroffenen nach Art. 21 DSGVO das Recht
+                        auf Widerspruch gegen die künftige Verarbeitung der sie betreffenden
+                        Daten, sofern die Daten durch den Anbieter nach Maßgabe von Art. 6 Abs. 1
+                        lit. f) DSGVO verarbeitet werden. Insbesondere ist ein Widerspruch gegen
+                        die Datenverarbeitung zum Zwecke der Direktwerbung statthaft.</strong
+                    >
+                </p>
+            </div>
+            <h3>III. Informationen zur Datenverarbeitung</h3>
+            <div>
+                <p>
+                    Ihre bei Nutzung unseres Internetauftritts verarbeiteten Daten werden
+                    gelöscht oder gesperrt, sobald der Zweck der Speicherung entfällt, der
+                    Löschung der Daten keine gesetzlichen Aufbewahrungspflichten entgegenstehen
+                    und nachfolgend keine anderslautenden Angaben zu einzelnen
+                    Verarbeitungsverfahren gemacht werden.
+                </p>
+            </div>
+            <h4>Serverdaten</h4>
+            <div>
+                <p>
+                    Aus technischen Gründen, insbesondere zur Gewährleistung eines sicheren und
+                    stabilen Internetauftritts, werden Daten durch Ihren Internet-Browser an uns
+                    bzw. an unseren Webspace-Provider übermittelt. Mit diesen sog.
+                    Server-Logfiles werden u.a. Typ und Version Ihres Internetbrowsers, das
+                    Betriebssystem, die Website, von der aus Sie auf unseren Internetauftritt
+                    gewechselt haben (Referrer URL), die Website(s) unseres Internetauftritts,
+                    die Sie besuchen, Datum und Uhrzeit des jeweiligen Zugriffs sowie die
+                    IP-Adresse des Internetanschlusses, von dem aus die Nutzung unseres
+                    Internetauftritts erfolgt, erhoben.
+                </p>
+                <p>
+                    Diese so erhobenen Daten werden vorrübergehend gespeichert, dies jedoch
+                    nicht gemeinsam mit anderen Daten von Ihnen.
+                </p>
+                <p>
+                    Diese Speicherung erfolgt auf der Rechtsgrundlage von Art. 6 Abs. 1 lit. f)
+                    DSGVO. Unser berechtigtes Interesse liegt in der Verbesserung, Stabilität,
+                    Funktionalität und Sicherheit unseres Internetauftritts.
+                </p>
+                <p>
+                    Die Daten werden spätestens nach sieben Tage wieder gelöscht, soweit keine
+                    weitere Aufbewahrung zu Beweiszwecken erforderlich ist. Andernfalls sind die
+                    Daten bis zur endgültigen Klärung eines Vorfalls ganz oder teilweise von der
+                    Löschung ausgenommen.
+                </p>
+            </div>
+            <h4>Cookies</h4>
+            <h5>a) Sitzungs-Cookies/Session-Cookies</h5>
+            <div>
+                <p>
+                    Wir verwenden mit unserem Internetauftritt sog. Cookies. Cookies sind kleine
+                    Textdateien oder andere Speichertechnologien, die durch den von Ihnen
+                    eingesetzten Internet-Browser auf Ihrem Endgerät ablegt und gespeichert
+                    werden. Durch diese Cookies werden im individuellen Umfang bestimmte
+                    Informationen von Ihnen, wie beispielsweise Ihre Browser- oder Standortdaten
+                    oder Ihre IP-Adresse, verarbeitet. &nbsp;
+                </p>
+                <p>
+                    Durch diese Verarbeitung wird unser Internetauftritt benutzerfreundlicher,
+                    effektiver und sicherer, da die Verarbeitung bspw. die Wiedergabe unseres
+                    Internetauftritts in unterschiedlichen Sprachen oder das Angebot einer
+                    Warenkorbfunktion ermöglicht.
+                </p>
+                <p>
+                    Rechtsgrundlage dieser Verarbeitung ist Art. 6 Abs. 1 lit b.) DSGVO, sofern
+                    diese Cookies Daten zur Vertragsanbahnung oder Vertragsabwicklung
+                    verarbeitet werden.
+                </p>
+                <p>
+                    Falls die Verarbeitung nicht der Vertragsanbahnung oder Vertragsabwicklung
+                    dient, liegt unser berechtigtes Interesse in der Verbesserung der
+                    Funktionalität unseres Internetauftritts. Rechtsgrundlage ist in dann Art. 6
+                    Abs. 1 lit. f) DSGVO.
+                </p>
+            </div>
+            <h5>b) Drittanbieter-Cookies</h5>
+            <div>
+                <p>
+                    Gegebenenfalls werden mit unserem Internetauftritt auch Cookies von
+                    Partnerunternehmen, mit denen wir zum Zwecke der Werbung, der Analyse oder
+                    der Funktionalitäten unseres Internetauftritts zusammenarbeiten, verwendet.
+                </p>
+                <p>
+                    Die Einzelheiten hierzu, insbesondere zu den Zwecken und den
+                    Rechtsgrundlagen der Verarbeitung solcher Drittanbieter-Cookies, entnehmen
+                    Sie bitte den nachfolgenden Informationen.
+                </p>
+            </div>
+            <h5>c) Beseitigungsmöglichkeit</h5>
+            <div>
+                <p>
+                    Sie können die Installation der Cookies durch eine Einstellung Ihres
+                    Internet-Browsers verhindern oder einschränken. Ebenfalls können Sie bereits
+                    gespeicherte Cookies jederzeit löschen. Die hierfür erforderlichen Schritte
+                    und Maßnahmen hängen jedoch von Ihrem konkret genutzten Internet-Browser ab.
+                    Bei Fragen benutzen Sie daher bitte die Hilfefunktion oder Dokumentation
+                    Ihres Internet-Browsers oder wenden sich an dessen Hersteller bzw. Support.
+                </p>
+                <p>
+                    Sollten Sie die Installation der Cookies verhindern oder einschränken, kann
+                    dies allerdings dazu führen, dass nicht sämtliche Funktionen unseres
+                    Internetauftritts vollumfänglich nutzbar sind.
+                </p>
+            </div>
+            <h4>Vertragsabwicklung</h4>
+            <div>
+                <p>
+                    Die von Ihnen zur Inanspruchnahme unseres Waren- und/oder
+                    Dienstleistungsangebots übermittelten Daten werden von uns zum Zwecke der
+                    Vertragsabwicklung verarbeitet und sind insoweit erforderlich.
+                    Vertragsschluss und Vertragsabwicklung sind ohne Bereitstellung Ihrer Daten
+                    nicht möglich.
+                </p>
+                <p>
+                    Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. b) DSGVO.
+                </p>
+                <p>
+                    Wir löschen die Daten mit vollständiger Vertragsabwicklung, müssen dabei
+                    aber die steuer- und handelsrechtlichen Aufbewahrungsfristen beachten.
+                </p>
+                <p>
+                    Im Rahmen der Vertragsabwicklung geben wir Ihre Daten an das mit der
+                    Warenlieferung beauftragte Transportunternehmen oder an den
+                    Finanzdienstleister weiter, soweit die Weitergabe zur Warenauslieferung oder
+                    zu Bezahlzwecken erforderlich ist.
+                </p>
+                <p>
+                    Rechtsgrundlage für die Weitergabe der Daten ist dann Art. 6 Abs. 1 lit. b)
+                    DSGVO.
+                </p>
+            </div>
+            <h4>Kundenkonto / Registrierungsfunktion</h4>
+            <div>
+                <p>
+                    Falls Sie über unseren Internetauftritt ein Kundenkonto bei uns anlegen,
+                    werden wir die von Ihnen bei der Registrierung eingegebenen Daten (also
+                    bspw. Ihren Namen, Ihre Anschrift oder Ihre E-Mail-Adresse) ausschließlich
+                    für vorvertragliche Leistungen, für die Vertragserfüllung oder zum Zwecke
+                    der Kundenpflege (bspw. um Ihnen eine Übersicht über Ihre bisherigen
+                    Bestellungen bei uns zur Verfügung zu stellen oder um Ihnen die sog.
+                    Merkzettelfunktion anbieten zu können) erheben und speichern. Gleichzeitig
+                    speichern wir dann die IP-Adresse und das Datum Ihrer Registrierung nebst
+                    Uhrzeit. Eine Weitergabe dieser Daten an Dritte erfolgt natürlich nicht.
+                </p>
+                <p>
+                    Im Rahmen des weiteren Anmeldevorgangs wird Ihre Einwilligung in diese
+                    Verarbeitung eingeholt und auf diese Datenschutzerklärung verwiesen. Die
+                    dabei von uns erhobenen Daten werden ausschließlich für die
+                    Zurverfügungstellung des Kundenkontos verwendet.&nbsp;
+                </p>
+                <p>
+                    Soweit Sie in diese Verarbeitung einwilligen, ist Art. 6 Abs. 1 lit. a)
+                    DSGVO Rechtsgrundlage für die Verarbeitung.
+                </p>
+                <p>
+                    Sofern die Eröffnung des Kundenkontos zusätzlich auch vorvertraglichen
+                    Maßnahmen oder der Vertragserfüllung dient, so ist Rechtsgrundlage für diese
+                    Verarbeitung auch noch Art. 6 Abs. 1 lit. b) DSGVO.
+                </p>
+                <p>
+                    Die uns erteilte Einwilligung in die Eröffnung und den Unterhalt des
+                    Kundenkontos können Sie gemäß Art. 7 Abs. 3 DSGVO jederzeit mit Wirkung für
+                    die Zukunft widerrufen. Hierzu müssen Sie uns lediglich über Ihren Widerruf
+                    in Kenntnis setzen.
+                </p>
+                <p>
+                    Die insoweit erhobenen Daten werden gelöscht, sobald die Verarbeitung nicht
+                    mehr erforderlich ist. Hierbei müssen wir aber steuer- und handelsrechtliche
+                    Aufbewahrungsfristen beachten.
+                </p>
+            </div>
+
+            <h4>Datenverarbeitung zur Bestellabwicklung</h4>
+            <div>
+                <p>
+                    Zur Abwicklung Ihrer Bestellung arbeiten wir mit dem / den nachstehenden
+                    Dienstleistern zusammen, die uns ganz oder teilweise bei der Durchführung
+                    geschlossener Verträge unterstützen. An diese Dienstleister werden nach
+                    Maßgabe der folgenden Informationen gewisse personenbezogene Daten
+                    übermittelt.
+                </p>
+            </div>
+
+            <h5>Verwendung von Paymentdienstleistern (Zahlungsdienstleister)</h5>
+            <div>
+                <p>
+                    Die Zahlungsabwicklung erfolgt über den technischen Dienstleister PayPal
+                    (Europe) S.à r.l. et Cie, S.C.A., an den wir Ihre Abrechnungsdaten (Name,
+                    Anschrift, E-Mail-Adresse, Rechnungsbetrag, Währung und Transaktionsnummer)
+                    zum Zwecke der Zahlungsabwicklung gemäß Art. 6 Abs. 1 lit. b DSGVO
+                    weitergeben. Die Weitergabe Ihrer Daten erfolgt ausschließlich zum Zwecke
+                    der Zahlungsabwicklung und nur insoweit, als sie hierfür erforderlich
+                    ist.<br />
+                    Nähere Informationen zum Umgang von PayPal mit personenbezogenen Daten
+                    finden Sie in der Datenschutzerklärung von PayPal unter
+                    <a
+                            href="https://www.braintreepayments.com/de/legal"
+                            target="_blank"
+                            rel="noopener"
+                    >https://www.braintreepayments.com/de/legal </a
+                    >.
+                </p>
+                <p>
+                    <a
+                            href="https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html"
+                            target="_blank"
+                            rel="noopener"
+                    >Muster-Datenschutzerklärung</a
+                    >
+                    der
+                    <a
+                            href="https://www.ratgeberrecht.eu/datenschutz/datenschutzerklaerung-generator-dsgvo.html"
+                            target="_blank"
+                            rel="noopener"
+                    >Anwaltskanzlei Weiß &amp; Partner</a
+                    >
+                </p>
+            </div>
+            <p>Stand 24.02.2023</p>
+
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="gdata-youtube-2.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/gdata-youtube-2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/gdata-client-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/gdata-core-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/gdata-media-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

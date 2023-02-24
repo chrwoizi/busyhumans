@@ -1,3 +1,7 @@
 /concept/Mockup.pptx
 /deploy
-/src/.idea
+/src/target
+/src/gwt-unitCache
+/src/out
+/src/server/war/WEB-INF/classes
+src/.idea/dictionaries/*.xml

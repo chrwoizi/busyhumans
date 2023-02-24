@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+    <ui:style>
+        .title {
+            margin: 0 0 14px 0;
+            font-size: 16pt;
+        }
+    </ui:style>
+    <g:HTMLPanel>
+        <div class="{style.title}">Impressum</div>
+        <div>Christian Woizischke, Software Engineering &amp; Consulting</div>
+        <div>31311 Uetze</div>
+        <div>GERMANY</div>
+        <div>busyhumans<img src="static/eddy.png" alt=""/>woizischke.com</div>
+        <h2>Streitschlichtung</h2>
+        <p>
+            Die Europ&auml;ische Kommission stellt eine Plattform zur
+            Online-Streitbeilegung (OS) bereit:
+            <a
+                    href="https://ec.europa.eu/consumers/odr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >https://ec.europa.eu/consumers/odr/</a
+            >.<br />
+            Verbraucher haben die Möglichkeit, diese Plattform für die Beilegung ihrer
+            Streitigkeiten zu nutzen.<br />Zur Teilnahme an einem
+            Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle sind wir
+            nicht verpflichtet und nicht bereit.
+        </p>
+    </g:HTMLPanel>
+</ui:UiBinder>

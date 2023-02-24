@@ -1,0 +1,76 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+
+        .assignment {
+        }
+
+        .sectionHeader {
+            font-size: 14pt;
+        }
+
+        .section {
+            padding-top: 10px;
+        }
+
+        .section2 {
+            padding-top: 30px;
+        }
+
+        .indented {
+            margin-left: 20px;
+        }
+
+        .noActivities {
+            margin-bottom: 20px;
+            color: #888888;
+        }
+
+        .subscribe {
+            height: 16px;
+            margin: 0 0 0 10px;
+            padding: 2px 6px 2px 6px;
+            cursor: pointer;
+        }
+
+        .subscribeLabel {
+            padding: 2px 0 0 4px;
+        }
+
+    </ui:style>
+    <g:HTMLPanel>
+        <g:HTMLPanel ui:field="notFound" visible="false">
+            The requested assignment does not exist.
+        </g:HTMLPanel>
+        <g:HTMLPanel ui:field="found" visible="false">
+            <g:HTMLPanel ui:field="assignmentPanel" styleName="{style.assignment}"/>
+            <g:HTMLPanel ui:field="activitiesPanel" styleName="{style.section}">
+                <g:Label text="Activities:" styleName="floatLeft {style.sectionHeader}"/>
+                <div class="floatLeft">
+                    <g:ToggleButton ui:field="subscribe" styleName="toggleButton {style.subscribe}">
+                        <g:upFace>
+                            <img src="/static/subscribe.png" alt="" class="floatLeft"/>
+                            <span class="floatLeft {style.subscribeLabel}">subscribe</span>
+                            <div class="stopFloat"/>
+                        </g:upFace>
+                        <g:downFace>
+                            <img src="/static/subscribed.png" alt="" class="floatLeft"/>
+                            <span class="floatLeft {style.subscribeLabel}">subscribed</span>
+                            <div class="stopFloat"/>
+                        </g:downFace>
+                    </g:ToggleButton>
+                </div>
+                <div class="stopFloat"/>
+                <br/>
+                <g:Label ui:field="noActivities" styleName="{style.indented} {style.noActivities}" text="Nobody has done this yet."/>
+                <g:HTMLPanel ui:field="activities" styleName="{style.indented}"/>
+            </g:HTMLPanel>
+            <g:HTMLPanel styleName="{style.section2}" ui:field="comments" visible="false">
+                <g:Label text="Comments:" styleName="{style.sectionHeader}"/>
+                <br/>
+                <g:HTMLPanel ui:field="commentsOuter" styleName="{style.indented}"/>
+            </g:HTMLPanel>
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder> 
