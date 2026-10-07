@@ -1,0 +1,177 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "app.fullname" . }}
+  labels:
+    {{- include "app.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "app.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "app.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "app.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      initContainers:
+        - name: changeowner
+          image: busybox
+          command: ["sh", "-c", "chown -R 1001:1001 /bitnami/mongodb"]   
+          volumeMounts:
+            - mountPath: /bitnami/mongodb
+              name: datadir
+      containers:
+        - name: "{{ .Chart.Name }}-db"
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: docker.io/bitnami/mongodb:4.2-debian-10
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 27017
+              name: mongodb
+              protocol: TCP
+          # livenessProbe:
+          #   exec:
+          #     command:
+          #     - /bitnami/scripts/ping-mongodb.sh
+          #   failureThreshold: 6
+          #   initialDelaySeconds: 30
+          #   periodSeconds: 20
+          #   successThreshold: 1
+          #   timeoutSeconds: 10
+          # readinessProbe:
+          #   exec:
+          #     command:
+          #     - /bitnami/scripts/readiness-probe.sh
+          #   failureThreshold: 6
+          #   initialDelaySeconds: 5
+          #   periodSeconds: 10
+          #   successThreshold: 1
+          #   timeoutSeconds: 5
+          resources: {}
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1001
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          env:
+            - name: BITNAMI_DEBUG
+              value: "false"
+            - name: MONGODB_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secretName | quote }}
+                  key: MONGODB_ROOT_PASSWORD
+            # - name: MONGODB_DATABASE
+            #   value: mastery
+            # - name: MONGODB_USERNAME
+            #   value: mastery-app
+            - name: MONGODB_EXTRA_USERNAMES
+              value: mastery-app
+            - name: MONGODB_EXTRA_DATABASES
+              value: mastery
+            - name: MONGODB_EXTRA_PASSWORDS
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secretName | quote }}
+                  key: MONGODB_PASSWORD
+            # - name: MONGODB_ROOT_USER
+            #   value: root
+            - name: ALLOW_EMPTY_PASSWORD
+              value: "no"
+            - name: MONGODB_SYSTEM_LOG_VERBOSITY
+              value: "0"
+            - name: MONGODB_DISABLE_SYSTEM_LOG
+              value: "no"
+            - name: MONGODB_DISABLE_JAVASCRIPT
+              value: "no"
+            - name: MONGODB_ENABLE_JOURNAL
+              value: "yes"
+            - name: MONGODB_PORT_NUMBER
+              value: "27017"
+            - name: MONGODB_ENABLE_IPV6
+              value: "no"
+            - name: MONGODB_ENABLE_DIRECTORY_PER_DB
+              value: "no"
+          volumeMounts:
+            - mountPath: /bitnami/mongodb
+              name: datadir
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: {{ include "app.image" . | quote }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.port }}
+              protocol: TCP
+          # livenessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: http
+          # readinessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: http
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          env:
+            - name: DATABASE_HOST
+              value: "localhost"
+            - name: DATABASE_NAME
+              value: "mastery"
+            - name: DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secretName | quote }}
+                  key: MONGODB_PASSWORD
+            - name: DATABASE_PORT
+              value: "27017"
+            - name: DATABASE_USER
+              value: "mastery-app"
+            - name: EMAIL_AUTH
+              value: "true"
+            - name: EMAIL_HOST
+              value: "localhost"
+            - name: EMAIL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secretName | quote }}
+                  key: EMAIL_PASSWORD
+            - name: EMAIL_PORT
+              value: "7125"
+            - name: EMAIL_SSL_TRUST
+              value: "*"
+            - name: EMAIL_STARTTLS
+              value: "true"
+            - name: EMAIL_USER
+              value: "test01@example.com"
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      volumes:
+        - name: datadir
+          persistentVolumeClaim:
+            claimName: {{ .Values.storageName | quote }}
+

@@ -1,0 +1,38 @@
+# Deploys busyhumans to the woizikube cluster as the helm release busyhumans
+# (chart: .pipeline/helm/busyhumans).
+#
+# The pipeline does not build the image: the Dockerfile copies src/out/ROOT.war,
+# which is built in the IDE and is not part of this repository. Build and push
+# <registry>/busyhumans:<version> by hand, then set that version as appVersion
+# in .pipeline/helm/busyhumans/Chart.yaml.
+#
+# The settings of the cluster for this project (namespace, registry, hosts,
+# volumes, secrets) are not part of this repository, see .pipeline/deploy.sh.
+# Before the first run:
+#   - woizikube: run "woizikube.sh prepare busyhumans"
+
+when:
+  - event: [push, manual]
+    branch: [master]
+
+labels:
+  backend: kubernetes
+
+clone:
+  git:
+    image: woodpeckerci/plugin-git
+    settings:
+      recursive: false
+
+steps:
+  - name: deploy
+    image: alpine/helm:3.17.3
+    pull: true
+    environment:
+      RELEASE_NAME: busyhumans
+    commands:
+      - apk add --no-cache kubectl
+      - sh .pipeline/deploy.sh
+    backend_options:
+      kubernetes:
+        serviceAccountName: woodpecker-busyhumans-deployer

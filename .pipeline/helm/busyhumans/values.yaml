@@ -1,0 +1,56 @@
+# Defaults of the chart. Everything that is specific to the cluster (registry,
+# ingress, node selector, volume) is not part of this repository: the pipeline
+# adds it, see .pipeline/deploy.sh.
+
+replicaCount: 1
+
+image:
+    # Registry that the cluster pulls from
+    registry: ""
+    name: busyhumans
+    # Replaces registry and name
+    repository: ""
+    pullPolicy: IfNotPresent
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: ""
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+    create: true
+    annotations: {}
+    # If not set and create is true, the name of the release is used
+    name: ""
+
+podAnnotations: {}
+podSecurityContext: {}
+securityContext: {}
+
+# The container listens on service.port
+service:
+    type: ClusterIP
+    port: 8080
+
+ingress:
+    enabled: false
+    className: ""
+    annotations: {}
+    hosts: []
+    tls: []
+
+resources: {}
+nodeSelector: {}
+tolerations: []
+affinity: {}
+
+# Secret with the keys MONGODB_ROOT_PASSWORD, MONGODB_PASSWORD and EMAIL_PASSWORD
+secretName: busyhumans
+
+# Claim for the volume of the cluster (data directory of the MongoDB)
+storageName: ""
+storageClassName: ""
+storageCapacity: "1Gi"
+storageAccessMode: "ReadWriteOnce"
+storageVolumeName: ""

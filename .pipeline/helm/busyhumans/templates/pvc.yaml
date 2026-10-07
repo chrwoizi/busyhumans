@@ -1,0 +1,13 @@
+{{- /* Claim for the volume that the cluster provides for this project */}}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ required "storageName is required" .Values.storageName | quote }}
+spec:
+  storageClassName: {{ .Values.storageClassName | quote }}
+  volumeName: {{ .Values.storageVolumeName | quote }}
+  accessModes:
+    - {{ .Values.storageAccessMode | quote }}
+  resources:
+    requests:
+      storage: {{ .Values.storageCapacity | quote }}
