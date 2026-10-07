@@ -5,3 +5,7 @@
 /src/out
 /src/server/war/WEB-INF/classes
 src/.idea/dictionaries/*.xml
+/.venv
+/data
+__pycache__/
+/staticfiles

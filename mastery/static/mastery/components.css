@@ -1,0 +1,1789 @@
+/* Styles of the components. Each class starts with the name of its component. */
+
+/* BorderlessPictureV */
+.BorderlessPictureV-outer {
+    position: relative;
+    outline: none;
+}
+.BorderlessPictureV-inner {
+    border: 0 none;
+    overflow: hidden;
+}
+.BorderlessPictureV-licenseButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 22px;
+    height: 22px;
+}
+.BorderlessPictureV-licensePos {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.BorderlessPictureV-image {
+    border: 0 none;
+}
+
+/* PictureV */
+.PictureV-outer {
+    position: relative;
+    outline: none;
+}
+.PictureV-inner {
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.PictureV-licenseButton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+}
+.PictureV-licensePos {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.PictureV-image {
+    border: 0 none;
+}
+
+/* TagCloudV */
+.TagCloudV-outer {
+    text-align: justify;
+}
+
+/* SelectableVideoV */
+.SelectableVideoV-outer {
+    margin-right: 4px;
+    cursor: pointer;
+}
+.SelectableVideoV-picture {
+    height: 90px;
+    border: 1px solid #888;
+}
+
+/* VideoRecorder */
+.VideoRecorder-outer {
+    width: 100%;
+}
+.VideoRecorder-recordingText {
+    padding-top: 6px;
+    font-size: 8pt;
+    text-align: center;
+    color: #888;
+}
+.VideoRecorder-cancel {
+    height: 22px;
+    padding: 0 6px;
+    margin-left: 10px;
+}
+
+/* VideoSelect */
+.VideoSelect-videosInner {
+    width: 100%;
+    height: 110px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.VideoSelect-cancel {
+    height: 22px;
+    margin-top: 10px;
+    padding: 0 6px;
+}
+
+/* VideoUpload */
+.VideoUpload-outer {
+    width: 100%;
+    height: 22px;
+}
+.VideoUpload-uploadingText {
+    padding-top: 5px;
+    font-size: 8pt;
+    text-align: center;
+}
+
+/* AccountMenu */
+.AccountMenu-outer {
+    float: right;
+    height: 100%;
+    text-align: center;
+}
+.AccountMenu-avatarOuter {
+    float: left;
+    width: 26px;
+    height: 26px;
+    margin: 5px;
+    overflow: hidden;
+}
+.AccountMenu-avatarInner {
+    width: 26px;
+    width: 26px;
+}
+.AccountMenu-name {
+    max-width: 325px;
+    padding-top: 9px;
+    font-size: 12pt;
+    color: #FFFFFF;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.AccountMenu-denied {
+    padding-right: 10px;
+    color: #FF0000;
+}
+.AccountMenu-profileLink {
+    padding-right: 4px;
+    text-decoration: none;
+    outline: none;
+}
+.AccountMenu-login {
+    padding: 6px 36px 0 0;
+    font-size: 16pt;
+    font-weight: bold;
+    color: #FFF;
+}
+.AccountMenu-login-hover {
+    text-shadow: 0 0 1px #FFFFFF, 0 0 2px #FFFFFF, 0 0 4px #FFFFFF;
+}
+.AccountMenu-preferences {
+    margin-top: 8px;
+    padding: 0 2px;
+    background: none;
+    border: 0 none;
+    cursor: pointer;
+}
+.AccountMenu-logout {
+    margin-top: 10px;
+    padding: 0 6px 0 2px;
+    background: none;
+    border: 0 none;
+    cursor: pointer;
+}
+.AccountMenu-loginInner {
+    position: relative;
+    padding: 0 0 4px 10px;
+}
+.AccountMenu-loginIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Bottom */
+.Bottom-outer {
+    height: 50px;
+    background-color: #E8E8E8;
+    border-top: 1px solid #CCC;
+}
+.Bottom-link {
+    margin: 16px 26px 0 0;
+}
+.Bottom-link > a {
+    color: #AAA;
+    font-size: 10pt;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* LoadingP */
+.LoadingP-outer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+.LoadingP-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 16pt;
+    color: #888;
+}
+
+/* LoginDropdown */
+.LoginDropdown-outer {
+    position: absolute;
+    right: 0;
+    top: 36px;
+    z-index: 1000;
+    background-color: #393939;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 6px;
+}
+.LoginDropdown-anon {
+    width: 166px;
+    height: 23px;
+    margin-top: 6px;
+    display: block;
+}
+.LoginDropdown-register {
+    width: 166px;
+    height: 23px;
+    margin-top: 6px;
+    display: block;
+}
+.LoginDropdown-username {
+    width: 92px;
+}
+.LoginDropdown-password {
+    width: 92px;
+}
+.LoginDropdown-anonLogin {
+    width: 110px;
+    height: 20px;
+}
+.LoginDropdown-anonLoginCancel {
+    width: 50px;
+    height: 20px;
+}
+.LoginDropdown-anonLabels {
+    width: 60px;
+    text-align: left;
+    color: #FFF;
+}
+.LoginDropdown-credential {
+    margin-bottom: 5px;
+}
+
+/* MainV */
+.MainV-middle {
+    width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    background-color: #FAFAFA;
+}
+
+/* PageContainer */
+.PageContainer-outer {
+    width: 600px;
+    padding: 52px 16px 16px;
+    background-color: #FFFFFF;
+    border-right: 1px solid #DDD;
+}
+
+/* SideBar */
+.SideBar-outer {
+    width: 267px;
+    padding-top: 52px;
+    background-color: #FAFAFA;
+}
+.SideBar-inner {
+    padding: 0 16px;
+}
+.SideBar-border {
+    margin-top: 10px;
+    padding-top: 16px;
+    border-top: 1px solid #DDD;
+}
+.SideBar-bottomBorder {
+    margin-bottom: 10px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #DDD;
+}
+.SideBar-tagCloud {
+    padding: 10px 0;
+    text-align: justify;
+}
+.SideBar-tagCloud a {
+    margin-right: 5px;
+    padding: 2px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #000;
+    outline: none;
+}
+.SideBar-tagCloud a:hover {
+    background-color: #D9E3FB;
+}
+.SideBar-caption {
+    font-size: 12pt;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.SideBar-social {
+    height: 64px;
+}
+
+/* Topbar */
+.Topbar-outer {
+    position: absolute;
+    width: 900px;
+    height: 36px;
+    z-index: 1000;
+    background: url("/static/topbar-bg.png") repeat-x scroll 0 0 transparent;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+.Topbar-inner {
+    width: 900px;
+    height: 36px;
+    background: url("/static/topbar-bg.png") repeat-x scroll 0 0 transparent;
+}
+.Topbar-logo {
+    float: left;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.Topbar-menuItem {
+    float: left;
+    height: 100%;
+    padding: 0 14px;
+}
+.Topbar-menuItemText {
+    float: left;
+    margin-top: 6px;
+    font-size: 16pt;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+.Topbar-right {
+    float: right;
+    height: 100%;
+    text-align: center;
+    color: white;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    cursor: default;
+}
+
+/* AboutP */
+.AboutP-title {
+    margin: 0 0 14px 0;
+    font-size: 16pt;
+}
+.AboutP-subtitle {
+    margin: 24px 0 10px 0;
+    font-size: 16pt;
+}
+.AboutP-content {
+    font-size: 12pt;
+}
+.AboutP-content > b {
+    font-size: 12pt;
+}
+.AboutP-content > i {
+    font-size: 12pt;
+}
+.AboutP-content > a {
+    font-size: 12pt;
+    color: #000;
+}
+
+/* AdminP */
+.AdminP-auth {
+    color: #888888;
+}
+.AdminP-titleN {
+    margin: 50px 0 14px 0;
+    font-size: 16pt;
+}
+.AdminP-cloak {
+    margin: 0 0 20px 0;
+}
+.AdminP-testPerson {
+    margin: 0 0 20px 0;
+}
+.AdminP-uploadPicture {
+    width: 60px;
+    height: 22px;
+    margin: 0 0 6px 0;
+}
+.AdminP-testPersonCreate {
+    padding: 2px;
+    width: 190px;
+}
+.AdminP-announcement {
+    margin: 0 0 20px 0;
+}
+.AdminP-announcementCreate {
+    padding: 2px;
+    width: 190px;
+}
+.AdminP-userCount {
+    font-size: 16pt;
+}
+
+/* AgreementP */
+.AgreementP-languageSelection {
+    margin: 6px 6px 0 0;
+}
+.AgreementP-agree {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 10pt;
+}
+
+/* AnonRegisterP */
+.AnonRegisterP-title {
+    margin: 0 0 14px 0;
+    font-size: 16pt;
+}
+.AnonRegisterP-error {
+    color: #FF0000;
+}
+.AnonRegisterP-register {
+    width: 250px;
+    height: 50px;
+    margin-top: 10px;
+}
+.AnonRegisterP-subtitle {
+    margin: 10px 0 5px 0;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+/* AssignmentP */
+.AssignmentP-assignment {
+
+}
+.AssignmentP-sectionHeader {
+    font-size: 14pt;
+}
+.AssignmentP-section {
+    padding-top: 10px;
+}
+.AssignmentP-section2 {
+    padding-top: 30px;
+}
+.AssignmentP-indented {
+    margin-left: 20px;
+}
+.AssignmentP-noActivities {
+    margin-bottom: 20px;
+    color: #888888;
+}
+.AssignmentP-subscribe {
+    height: 16px;
+    margin: 0 0 0 10px;
+    padding: 2px 6px 2px 6px;
+    cursor: pointer;
+}
+.AssignmentP-subscribeLabel {
+    padding: 2px 0 0 4px;
+}
+
+/* DiscoverP */
+.DiscoverP-title {
+    margin: 0 0 14px 0;
+    font-size: 16pt;
+    font-weight: bold;
+}
+.DiscoverP-sortBy {
+    margin-bottom: 20px;
+}
+.DiscoverP-sortByLabel {
+    font-size: 12pt;
+}
+.DiscoverP-sortByOption {
+    margin-left: 10px;
+}
+.DiscoverP-sortByOption > label {
+    font-size: 10pt;
+}
+
+/* ImprintP */
+.ImprintP-title {
+    margin: 0 0 14px 0;
+    font-size: 16pt;
+}
+
+/* LegalP */
+.LegalP-languageSelection {
+    margin: 6px 6px 0 0;
+}
+
+/* NewAssignmentP */
+.NewAssignmentP-title {
+    margin: 0 0 14px 0;
+    font-size: 16pt;
+    font-weight: bold;
+}
+.NewAssignmentP-inner {
+
+}
+.NewAssignmentP-innerAuth {
+    color: #888888;
+}
+
+/* PersonP */
+.PersonP-empty {
+    color: #888888;
+}
+.PersonP-headers {
+    margin: 20px 0;
+}
+.PersonP-tabHeader {
+    width: 33%;
+    height: 30px;
+    display: table;
+}
+.PersonP-tabHeader1 {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.PersonP-tabHeader2 {
+    border-radius: 0;
+}
+.PersonP-tabHeader3 {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.PersonP-tabHeader > div {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 10pt;
+}
+.PersonP-tabContent {
+
+}
+
+/* PreferencesP */
+.PreferencesP-title {
+    margin: 0 0 14px 0;
+    font-size: 16pt;
+}
+.PreferencesP-subtitle {
+    margin: 20px 0 0 0;
+    font-size: 10pt;
+    font-weight: bold;
+}
+.PreferencesP-save {
+    width: 150px;
+    height: 30px;
+    margin-top: 20px;
+}
+.PreferencesP-notify {
+    margin: 16px 0 0 4px;
+}
+.PreferencesP-indent {
+    margin-left: 20px;
+}
+.PreferencesP-checkbox {
+    margin-top: 6px;
+    display: block;
+}
+.PreferencesP-denied {
+    color: #888;
+}
+.PreferencesP-label {
+    padding-right: 5px;
+    padding-top: 2px;
+}
+.PreferencesP-textbox {
+    width: 130px;
+}
+.PreferencesP-textboxes {
+    margin-top: 6px;
+}
+.PreferencesP-usernameHint {
+    margin: 4px 0 0 4px;
+    color: #E00000;
+}
+
+/* SkillP */
+.SkillP-assignmentsHeader {
+    font-size: 14pt;
+}
+.SkillP-assignments {
+    padding-top: 10px;
+}
+.SkillP-indented {
+    margin-left: 20px;
+}
+
+/* EmailV */
+.EmailV-caption {
+    font-size: 12pt;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #E00000;
+}
+.EmailV-title {
+    font-size: 10pt;
+    font-weight: bold;
+    color: #E00000;
+}
+.EmailV-question {
+    margin-top: 10px;
+    font-weight: bold;
+}
+.EmailV-answer {
+    margin: 4px 0 0 10px;
+}
+.EmailV-answerPrio {
+    margin: 4px 0 0 10px;
+    font-weight: bold;
+    color: #E00000;
+}
+.EmailV-assign {
+    width: 70px;
+    height: 24px;
+    margin-top: 18px;
+}
+.EmailV-label {
+    padding-right: 5px;
+    padding-top: 2px;
+    font-weight: bold;
+}
+.EmailV-textbox {
+    width: 130px;
+}
+.EmailV-textboxes {
+    margin-top: 20px;
+}
+.EmailV-usernameHint {
+    margin: 4px 0 0 0;
+    color: #E00000;
+}
+
+/* ActivityV */
+.ActivityV-outer {
+    padding-bottom: 10px;
+    position: relative;
+}
+.ActivityV-buttons {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.ActivityV-pictureInner {
+    width: 52px;
+    height: 52px;
+    margin-right: 10px;
+}
+.ActivityV-authorName {
+    padding-top: 2px;
+}
+.ActivityV-authorName > a {
+    color: #000000;
+}
+.ActivityV-reward {
+    color: #888;
+    margin-bottom: 6px;
+}
+.ActivityV-details1Outer {
+    width: 100%;
+}
+.ActivityV-details2Inner {
+    margin-left: 62px;
+}
+.ActivityV-contentPanel {
+    width: 400px;
+}
+.ActivityV-abuse {
+    height: 18px;
+    padding: 2px 2px 0px 2px;
+}
+.ActivityV-clearAbuse {
+    height: 18px;
+    margin-right: 6px;
+    padding: 2px 2px 0px 2px;
+}
+.ActivityV-abuseReportCount {
+    padding-top: 2px;
+}
+.ActivityV-delete {
+    width: 22px;
+    height: 22px;
+    background-image: url('/static/trash.png');
+    background-repeat: no-repeat;
+    background-position: 2px;
+}
+.ActivityV-ratingsOuter {
+    height: 22px;
+    margin-bottom: 6px;
+}
+.ActivityV-rate {
+    width: 20px;
+    height: 18px;
+    padding-top: 2px;
+}
+.ActivityV-ratings {
+    position: relative;
+    width: 40px;
+    height: 10px;
+    margin: 6px 4px 0 4px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.ActivityV-netRating {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    text-align: center;
+    cursor: default;
+    font-size: 6pt;
+    font-weight: bold;
+    color: #FFF;
+}
+.ActivityV-likes {
+    height: 22px;
+    background-color: #40D010;
+}
+.ActivityV-dislikes {
+    height: 22px;
+    background-color: #D04010;
+}
+
+/* ImageContentBlockV */
+.ImageContentBlockV-outer {
+    width: 100%;
+    margin-bottom: 6px;
+}
+.ImageContentBlockV-inner {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+.ImageContentBlockV-image {
+    max-width: 400px;
+}
+.ImageContentBlockV-delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* NewActivityV */
+.NewActivityV-outer {
+    padding-bottom: 10px;
+}
+.NewActivityV-authorPicture {
+    margin-right: 10px;
+}
+.NewActivityV-authorName {
+    padding-top: 6px;
+    margin-bottom: 6px;
+}
+.NewActivityV-authorName > a {
+    color: #000000;
+}
+.NewActivityV-details {
+    width: 100%;
+    margin-left: -62px;
+}
+.NewActivityV-detailsInner {
+    margin-left: 62px;
+}
+.NewActivityV-contentOuter {
+    width: 100%;
+    margin-right: -70px;
+}
+.NewActivityV-contentInner {
+    margin-right: 70px;
+}
+.NewActivityV-create {
+    width: 100px;
+    height: 50px;
+    font-size: 12pt;
+}
+.NewActivityV-addMediaLabel {
+    vertical-align: top;
+    padding-top: 6px;
+}
+.NewActivityV-addMediaButtons {
+    padding-left: 10px;
+}
+.NewActivityV-uploadPicture {
+    width: 80px;
+    height: 22px;
+    margin: 0 0 6px 0;
+}
+.NewActivityV-uploadPictureInfo {
+    margin: 5px 0 0 10px;
+}
+.NewActivityV-selectVideoButton {
+    width: 110px;
+    height: 22px;
+}
+.NewActivityV-selectVideo {
+    width: 325px;
+}
+.NewActivityV-uploadVideo {
+    width: 110px;
+    height: 22px;
+    margin-left: 10px;
+}
+.NewActivityV-recordVideoButton {
+    width: 80px;
+    height: 22px;
+    margin-left: 10px;
+}
+.NewActivityV-recordVideo {
+
+}
+.NewActivityV-text {
+    width: 400px;
+    margin-bottom: 6px;
+}
+.NewActivityV-googleAuth {
+    height: 22px;
+    padding: 0 6px;
+}
+.NewActivityV-hint {
+    color: #0080C0;
+}
+
+/* PleaseLoginV */
+.PleaseLoginV-outer {
+    margin-top: 10px;
+}
+.PleaseLoginV-inner {
+    color: #888;
+}
+
+/* TextContentBlockV */
+.TextContentBlockV-outer {
+    position: relative;
+    width: 100%;
+    margin-bottom: 6px;
+    max-width: 400px;
+}
+.TextContentBlockV-text {
+    width: 100%;
+    overflow: hidden;
+}
+.TextContentBlockV-delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* VideoContentBlockV */
+.VideoContentBlockV-outer {
+    position: relative;
+    width: 100%;
+    margin-bottom: 6px;
+    max-width: 402px;
+}
+.VideoContentBlockV-titleBar {
+    width: 400px;
+    height: 19px;
+    background-color: #DDDDDD;
+    border-top: 1px solid #888888;
+    border-left: 1px solid #888888;
+    border-right: 1px solid #888888;
+    border-bottom: 0 none;
+    border-radius: 5px 5px 0 0;
+}
+.VideoContentBlockV-title {
+    margin-right: 18px;
+    padding: 3px 0 0 3px;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #555;
+}
+.VideoContentBlockV-delete {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 18px;
+    height: 18px;
+    background: none;
+}
+.VideoContentBlockV-video {
+    border: 1px solid #888;
+}
+.VideoContentBlockV-videoPanel {
+    width: 400px;
+    height: 300px;
+}
+.VideoContentBlockV-statusPanel {
+    width: 400px;
+    height: 300px;
+    display: table;
+    border: 1px solid #888;
+    background-color: #EEE;
+}
+.VideoContentBlockV-statusPanelInner {
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+.VideoContentBlockV-status {
+    text-align: center;
+}
+.VideoContentBlockV-statusText {
+    margin: 0 20px;
+}
+
+/* AnnouncementsV */
+.AnnouncementsV-caption {
+    font-size: 12pt;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+/* AnnouncementV */
+.AnnouncementV-text {
+    font-size: 10pt;
+    margin: 4px 4px 10px 4px;
+    white-space: normal;
+}
+.AnnouncementV-close {
+    width: 100%;
+    height: 30px;
+}
+
+/* AssignmentHeadV */
+.AssignmentHeadV-aboutOuter {
+    width: 100%;
+    margin-left: -122px;
+}
+.AssignmentHeadV-aboutInner {
+    margin: 6px 0 0 132px;
+}
+.AssignmentHeadV-title {
+    font-size: 16pt;
+    color: #000;
+}
+.AssignmentHeadV-reward {
+    font-size: 16pt;
+}
+.AssignmentHeadV-description {
+    font-size: 10pt;
+    overflow: hidden;
+}
+.AssignmentHeadV-author {
+    margin: 2px 10px 0 0;
+}
+.AssignmentHeadV-authorPrefix {
+    margin-right: 4px;
+    color: #888;
+}
+.AssignmentHeadV-authorName {
+    color: #888;
+}
+.AssignmentHeadV-authorName > a {
+    color: #888;
+}
+.AssignmentHeadV-abuse {
+    height: 18px;
+    margin-right: 6px;
+    padding: 2px 2px 0px 2px;
+}
+.AssignmentHeadV-abuseReportCount {
+    padding-top: 2px;
+}
+.AssignmentHeadV-delete {
+    width: 22px;
+    height: 22px;
+    margin-right: 6px;
+    background-image: url('/static/trash.png');
+    background-repeat: no-repeat;
+    background-position: 2px;
+}
+.AssignmentHeadV-speedup {
+    width: 22px;
+    height: 22px;
+    margin-right: 6px;
+}
+.AssignmentHeadV-categoryOuter {
+    margin-bottom: 10px;
+}
+.AssignmentHeadV-categoryLabel {
+    font-size: 8pt;
+    color: #888;
+}
+.AssignmentHeadV-category {
+
+}
+.AssignmentHeadV-category a {
+    color: #888;
+    font-size: 10pt;
+    font-weight: bold;
+}
+.AssignmentHeadV-buttons {
+    margin: 2px 0 0 6px;
+}
+.AssignmentHeadV-boostUp {
+    height: 16px;
+    margin: 2px 2px 0 0;
+    padding: 2px 2px 0px 2px;
+    cursor: pointer;
+}
+.AssignmentHeadV-boostDown {
+    height: 16px;
+    margin: 2px 6px 0 0;
+    padding: 2px 2px 0px 2px;
+    cursor: pointer;
+}
+.AssignmentHeadV-social {
+    margin-top: 8px;
+}
+
+/* AssignmentOverviewV */
+.AssignmentOverviewV-outer {
+    margin-bottom: 10px;
+}
+.AssignmentOverviewV-inner {
+    position: relative;
+    padding-right: 10px;
+}
+.AssignmentOverviewV-mouseOverEffect {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5588FF;
+    opacity: 0.2;
+    border-radius: 5px;
+}
+.AssignmentOverviewV-anchor {
+    outline: none;
+    color: #000000;
+    text-decoration: none !important;
+}
+.AssignmentOverviewV-aboutOuter {
+    width: 100%;
+    margin-left: -122px;
+}
+.AssignmentOverviewV-aboutInner {
+    margin: 6px 0 0 132px;
+}
+.AssignmentOverviewV-title {
+    font-size: 16pt;
+}
+.AssignmentOverviewV-reward {
+    font-size: 16pt;
+}
+.AssignmentOverviewV-description {
+    font-size: 10pt;
+    overflow: hidden;
+}
+.AssignmentOverviewV-categoryOuter {
+    margin-bottom: 10px;
+}
+.AssignmentOverviewV-categoryLabel {
+    font-size: 8pt;
+    color: #888;
+}
+.AssignmentOverviewV-category {
+    font-size: 10pt;
+    font-weight: bold;
+    color: #888;
+}
+.AssignmentOverviewV-activities {
+    font-weight: bold;
+    font-size: 10pt;
+    color: #AAA;
+}
+.AssignmentOverviewV-newActivities {
+    font-weight: bold;
+    font-size: 10pt;
+    color: #00AA00;
+}
+
+/* NewAssignmentV */
+.NewAssignmentV-denied {
+    color: #FF5555;
+}
+.NewAssignmentV-aboutOuter {
+    width: 100%;
+    margin-left: -122px;
+}
+.NewAssignmentV-aboutInner {
+    margin-left: 132px;
+}
+.NewAssignmentV-titleCaption {
+
+}
+.NewAssignmentV-validation {
+    color: #FF5555;
+    font-weight: bold;
+}
+.NewAssignmentV-title {
+    width: 330px;
+    font-size: 16pt;
+}
+.NewAssignmentV-descriptionOuter {
+    margin-top: 4px;
+}
+.NewAssignmentV-descriptionCaption {
+
+}
+.NewAssignmentV-description {
+    width: 465px;
+    font-size: 10pt;
+}
+.NewAssignmentV-skillCaption {
+    font-size: 10pt;
+}
+.NewAssignmentV-skill {
+    margin: 10px 0 0 30px;
+}
+.NewAssignmentV-rewardAmountPanel {
+    text-align: right;
+}
+.NewAssignmentV-rewardCaption {
+    text-align: left;
+}
+.NewAssignmentV-reward {
+    font-size: 16pt;
+    text-align: right;
+}
+.NewAssignmentV-rewardUnit {
+    font-size: 16pt;
+}
+.NewAssignmentV-createButton {
+    width: 100%;
+    height: 50px;
+    margin: 26px 0 0 0;
+    font-size: 12pt;
+}
+.NewAssignmentV-skillPanel {
+    margin: 10px 0 0 0;
+}
+
+/* LazyListV */
+.LazyListV-empty {
+    color: #888888;
+}
+.LazyListV-loadingOuter {
+    margin-top: 20px;
+}
+.LazyListV-loading {
+    color: #888;
+}
+
+/* PersonAdminInfoV */
+.PersonAdminInfoV-name {
+    font-size: 10pt;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.PersonAdminInfoV-name > a {
+    font-size: 10pt;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.PersonAdminInfoV-stat {
+    margin-right: 10px;
+}
+.PersonAdminInfoV-outer {
+    margin-bottom: 10px;
+}
+
+/* PersonHeaderV */
+.PersonHeaderV-aboutOuter {
+    width: 100%;
+    margin-left: -170px;
+}
+.PersonHeaderV-aboutInner {
+    margin-left: 170px;
+}
+.PersonHeaderV-name {
+    font-size: 18pt;
+    font-weight: bold;
+    margin: 10px 0 12px 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.PersonHeaderV-stats {
+    padding-right: 2px;
+}
+.PersonHeaderV-statsRight {
+    margin-left: 100px;
+    padding-top: 10px;
+}
+.PersonHeaderV-badge {
+    position: relative;
+    width: 80px;
+    height: 90px;
+    background-image: url('/static/badge.png');
+}
+.PersonHeaderV-levelOuter {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+.PersonHeaderV-levelLabel {
+    position: absolute;
+    left: -1px;
+    top: 13px;
+    width: 100%;
+    font-size: 8pt;
+    font-weight: bold;
+    text-align: center;
+    cursor: default;
+    color: #888;
+}
+.PersonHeaderV-level {
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 12px;
+    font-size: 18pt;
+    font-weight: bold;
+    text-align: center;
+    cursor: default;
+}
+.PersonHeaderV-levelProgressOuter {
+    position: relative;
+    width: 240px;
+}
+.PersonHeaderV-xpInner {
+    position: absolute;
+    left: 50%;
+}
+.PersonHeaderV-xp {
+    margin-left: -50%;
+    font-size: 10pt;
+    white-space: nowrap;
+    font-weight: bold;
+    cursor: default;
+}
+.PersonHeaderV-progressBar {
+    width: 100%;
+    height: 18px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.PersonHeaderV-progress {
+    width: 50%;
+    height: 100%;
+    background-color: #B8D8FF;
+}
+.PersonHeaderV-antiProgress {
+    width: 50%;
+    height: 100%;
+    background-color: #FFF;
+}
+.PersonHeaderV-xpLeftBound {
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    color: #888;
+    cursor: default;
+}
+.PersonHeaderV-xpRightBound {
+    position: absolute;
+    top: 3px;
+    right: 4px;
+    color: #888;
+    cursor: default;
+}
+.PersonHeaderV-statsTable {
+    width: 240px;
+    margin-top: 6px;
+}
+.PersonHeaderV-stat {
+    text-align: right;
+}
+.PersonHeaderV-founder {
+    margin: 20px 4px 0 0;
+}
+.PersonHeaderV-founderImage {
+    margin-left: 2px;
+}
+.PersonHeaderV-founderLabel {
+    margin-top: -7px;
+    font-weight: bold;
+    font-size: 10pt;
+    color: #888;
+    cursor: default;
+}
+
+/* RankingsV */
+.RankingsV-caption {
+    font-size: 12pt;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.RankingsV-light {
+    color: #888;
+}
+.RankingsV-myselfSpacer {
+    margin: -10px 0 0 18px;
+    padding-bottom: 10px;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #888;
+}
+
+/* RankingV */
+.RankingV-outer {
+    position: relative;
+    overflow: hidden;
+}
+.RankingV-aboutOuter {
+    width: 100%;
+    margin-left: -60px;
+}
+.RankingV-aboutInner {
+    margin-left: 60px;
+}
+.RankingV-row1 {
+    margin: 2px 0 4px 0;
+}
+.RankingV-rank {
+    display: inline;
+    font-size: 16pt;
+    font-weight: bold;
+}
+.RankingV-name {
+    display: inline;
+    font-size: 10pt;
+    font-weight: bold;
+    margin-left: 6px;
+}
+.RankingV-stats {
+    font-size: 8pt;
+    font-weight: bold;
+}
+.RankingV-mouseOverEffect {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5588FF;
+    opacity: 0.2;
+    border-radius: 5px;
+}
+.RankingV-anchor {
+    position: relative;
+    outline: none;
+    color: #000000;
+    text-decoration: none !important;
+}
+
+/* AssignmentSearchResultV */
+.AssignmentSearchResultV-outer {
+    position: relative;
+    overflow: hidden;
+}
+.AssignmentSearchResultV-aboutOuter {
+    width: 100%;
+    margin-left: -60px;
+}
+.AssignmentSearchResultV-aboutInner {
+    margin-left: 60px;
+}
+.AssignmentSearchResultV-title {
+    font-size: 10pt;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.AssignmentSearchResultV-stats {
+    font-size: 8pt;
+}
+.AssignmentSearchResultV-mouseOverEffect {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5588FF;
+    opacity: 0.2;
+    border-radius: 5px;
+}
+.AssignmentSearchResultV-anchor {
+    position: relative;
+    outline: none;
+    color: #000000;
+    text-decoration: none !important;
+}
+
+/* PersonSearchResultV */
+.PersonSearchResultV-outer {
+    position: relative;
+    overflow: hidden;
+}
+.PersonSearchResultV-aboutOuter {
+    width: 100%;
+    margin-left: -60px;
+}
+.PersonSearchResultV-aboutInner {
+    margin-left: 60px;
+}
+.PersonSearchResultV-name {
+    font-size: 10pt;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.PersonSearchResultV-stats {
+    font-size: 8pt;
+}
+.PersonSearchResultV-mouseOverEffect {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5588FF;
+    opacity: 0.2;
+    border-radius: 5px;
+}
+.PersonSearchResultV-anchor {
+    position: relative;
+    outline: none;
+    color: #000000;
+    text-decoration: none !important;
+}
+
+/* SearchV */
+.SearchV-caption {
+    font-size: 12pt;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.SearchV-search {
+    width: 229px;
+    margin-bottom: 10px;
+}
+.SearchV-hasMore {
+    color: #888;
+}
+
+/* SkillSearchResultV */
+.SkillSearchResultV-outer {
+    position: relative;
+    overflow: hidden;
+}
+.SkillSearchResultV-aboutOuter {
+    width: 100%;
+    margin-left: -60px;
+}
+.SkillSearchResultV-aboutInner {
+    margin-left: 60px;
+}
+.SkillSearchResultV-title {
+    font-size: 10pt;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.SkillSearchResultV-stats {
+    font-size: 8pt;
+    max-height: 30px;
+    overflow: hidden;
+}
+.SkillSearchResultV-mouseOverEffect {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5588FF;
+    opacity: 0.2;
+    border-radius: 5px;
+}
+.SkillSearchResultV-anchor {
+    position: relative;
+    outline: none;
+    color: #000000;
+    text-decoration: none !important;
+}
+
+/* AchievementV */
+.AchievementV-expandButton {
+    width: 122px;
+}
+.AchievementV-aboutOuter {
+    width: 100%;
+    margin-left: -122px;
+}
+.AchievementV-aboutInner {
+    margin-left: 132px;
+}
+.AchievementV-title {
+    font-size: 16pt;
+}
+.AchievementV-title > a {
+    font-size: 16pt;
+}
+.AchievementV-description {
+    font-size: 10pt;
+}
+.AchievementV-descriptionLicense {
+    text-align: right;
+}
+.AchievementV-license {
+    color: #888;
+}
+.AchievementV-separator {
+    width: 100%;
+    height: 1px;
+    margin: 15px 0;
+    background-color: #DDD;
+}
+.AchievementV-indented {
+    margin-left: 20px;
+}
+.AchievementV-expanded {
+    padding-top: 10px;
+}
+
+/* ExistingSkillV */
+.ExistingSkillV-outer {
+    padding-bottom: 10px;
+}
+.ExistingSkillV-inner {
+    position: relative;
+}
+.ExistingSkillV-focusPanel {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.ExistingSkillV-mouseOverEffect {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5588FF;
+    opacity: 0.2;
+}
+.ExistingSkillV-details2Inner {
+    margin-left: 62px;
+}
+.ExistingSkillV-pictureOuter {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.ExistingSkillV-pictureInner {
+    width: 50px;
+    height: auto;
+}
+.ExistingSkillV-title {
+    padding-top: 6px;
+    font-size: 14pt;
+}
+.ExistingSkillV-description {
+
+}
+.ExistingSkillV-descriptionLicense {
+    text-align: right;
+}
+.ExistingSkillV-license {
+    color: #888;
+}
+
+/* LicenseV */
+.LicenseV-outer {
+    position: absolute;
+    border: 1px solid #888;
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 6px;
+}
+.LicenseV-nowrap {
+    white-space: nowrap;
+}
+
+/* NewSkillV */
+.NewSkillV-outer {
+    margin-bottom: 10px;
+}
+.NewSkillV-inner {
+    position: relative;
+}
+.NewSkillV-details2Inner {
+    margin-left: 62px;
+}
+.NewSkillV-pictureOuter {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.NewSkillV-pictureInner {
+    width: 50px;
+    height: auto;
+}
+.NewSkillV-title {
+    padding-top: 6px;
+    font-size: 14pt;
+}
+.NewSkillV-descriptionCaption {
+    font-size: 10pt;
+}
+.NewSkillV-description {
+    width: 100%;
+}
+.NewSkillV-pictureSearchPanel {
+    margin-top: 10px;
+}
+.NewSkillV-pictureSearchCaption {
+    font-size: 10pt;
+}
+.NewSkillV-pictureSearch {
+    margin-left: 10px;
+    font-size: 10pt;
+}
+.NewSkillV-pictureLargeOuter {
+    margin-right: 10px;
+}
+.NewSkillV-pictures {
+    margin-top: 10px;
+}
+.NewSkillV-picturesPanel {
+    position: relative;
+    margin: 0 56px 0 152px;
+}
+.NewSkillV-arrowLeft {
+    margin: 40px 10px 0 0;
+}
+.NewSkillV-noPicturesFound {
+    position: absolute;
+    top: 48px;
+    width: 100%;
+    text-align: center;
+}
+.NewSkillV-loading {
+    position: absolute;
+    top: 48px;
+    width: 100%;
+    text-align: center;
+    color: #888;
+}
+
+/* SkillSelectionV */
+.SkillSelectionV-searchCaption {
+    font-size: 10pt;
+}
+.SkillSelectionV-search {
+    width: 200px;
+    margin: 0 0 0 10px;
+    font-size: 12pt;
+}
+.SkillSelectionV-existingSkills {
+    position: relative;
+    margin-top: 10px;
+    min-height: 50px;
+}
+.SkillSelectionV-newSkill {
+    padding: 4px;
+}
+.SkillSelectionV-selectedSkillPanel {
+
+}
+.SkillSelectionV-enterTerm {
+    position: absolute;
+    top: 16px;
+    width: 100%;
+    text-align: center;
+    color: #888;
+}
+.SkillSelectionV-noSkillsFound {
+    margin-top: 16px;
+    width: 100%;
+    text-align: center;
+}
+.SkillSelectionV-noSkillsFoundCaption {
+
+}
+.SkillSelectionV-loading {
+    position: absolute;
+    top: 16px;
+    width: 100%;
+    text-align: center;
+    color: #888;
+}
+.SkillSelectionV-changeButton {
+    height: 22px;
+    margin-bottom: 10px;
+    padding: 0 6px;
+}
+
+/* SkillV */
+.SkillV-aboutOuter {
+    width: 100%;
+    margin-left: -122px;
+}
+.SkillV-aboutInner {
+    margin: 6px 0 0 132px;
+}
+.SkillV-title {
+    margin-bottom: 10px;
+    font-size: 16pt;
+}
+.SkillV-description {
+    font-size: 10pt;
+    overflow: hidden;
+}
+.SkillV-descriptionLicense {
+    text-align: right;
+}
+.SkillV-license {
+    color: #888;
+}
+.SkillV-authorName > a {
+    color: #888;
+}
+.SkillV-abuse {
+    height: 18px;
+    margin-right: 6px;
+    padding: 2px 2px 0px 2px;
+}
+.SkillV-abuseReportCount {
+    padding-top: 2px;
+}
+.SkillV-delete {
+    width: 22px;
+    height: 22px;
+    margin-right: 6px;
+    background-image: url('/static/trash.png');
+    background-repeat: no-repeat;
+    background-position: 2px;
+}
+.SkillV-buttons {
+    margin: 2px 0 0 6px;
+}
+
+/* SmallPictureV */
+.SmallPictureV-outer {
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+.SmallPictureV-inner {
+    position: relative;
+}
+.SmallPictureV-mouseOverEffect {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5588FF;
+    border-radius: 5px;
+    opacity: 0.2;
+}
+.SmallPictureV-pictureOuter {
+    width: 49px;
+    height: 49px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.SmallPictureV-pictureInner {
+    width: 49px;
+    height: auto;
+}
+
+/* TermsOfServiceV */
+.TermsOfServiceV-title {
+    margin: 0 0 14px 0;
+    font-size: 16pt;
+}
+.TermsOfServiceV-caption {
+    font-weight: bold;
+}
+.TermsOfServiceV-hint {
+    margin-bottom: 10px;
+    color: #E80000;
+}

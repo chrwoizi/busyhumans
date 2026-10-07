@@ -1,7 +1,8 @@
 # Defaults of the chart. Everything that is specific to the cluster (registry,
-# ingress, node selector, volume) is not part of this repository: the pipeline
-# adds it, see .pipeline/deploy.sh.
+# ingress, node selector, volumes, environment of the container) is not part of
+# this repository: the pipeline adds it, see .pipeline/deploy.sh.
 
+# The database is a file: more than one replica would corrupt it
 replicaCount: 1
 
 image:
@@ -11,7 +12,7 @@ image:
     # Replaces registry and name
     repository: ""
     pullPolicy: IfNotPresent
-    # Overrides the image tag whose default is the chart appVersion.
+    # Set by the pipeline to the commit that it built
     tag: ""
 
 imagePullSecrets: []
@@ -25,8 +26,15 @@ serviceAccount:
     name: ""
 
 podAnnotations: {}
-podSecurityContext: {}
-securityContext: {}
+# The image runs as this user. The volume has to be writable for it.
+podSecurityContext:
+    runAsNonRoot: true
+    runAsUser: 1000
+    runAsGroup: 1000
+securityContext:
+    allowPrivilegeEscalation: false
+    capabilities:
+        drop: ["ALL"]
 
 # The container listens on service.port
 service:
@@ -38,17 +46,32 @@ ingress:
     className: ""
     annotations: {}
     hosts: []
+    #    - host: example.com
+    #      paths:
+    #          - path: /
+    #            pathType: Prefix
     tls: []
+    #    - secretName: example-com-tls
+    #      hosts:
+    #          - example.com
 
 resources: {}
 nodeSelector: {}
 tolerations: []
 affinity: {}
 
-# Secret with the keys MONGODB_ROOT_PASSWORD, MONGODB_PASSWORD and EMAIL_PASSWORD
-secretName: busyhumans
+# Environment of the container, same syntax as in a pod spec.
+# Required: SECRET_KEY, ALLOWED_HOSTS and BASE_URL. See README.md for the rest.
+env: []
 
-# Claim for the volume of the cluster (data directory of the MongoDB)
+# The cluster provides a volume with the name "data" in volumes. It holds the
+# database file and the pictures.
+volumeMounts:
+    - name: data
+      mountPath: /data
+volumes: []
+
+# Claim for the volume of the cluster
 storageName: ""
 storageClassName: ""
 storageCapacity: "1Gi"

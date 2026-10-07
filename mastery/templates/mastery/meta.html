@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="utf-8">
+    <title>BUSY HUMANS</title>
+    <link href="/static/favicon.png" rel="icon" type="image/png">
+    {% if title %}<meta property="title" content="{{ title }}">
+    <meta property="description" content="{{ description }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:url" content="{{ meta_url }}">
+    <meta property="og:image" content="{{ image }}">
+    <meta property="og:site_name" content="BUSY HUMANS">{% endif %}
+    <meta http-equiv="refresh" content="0; URL={{ url }}">
+</head>
+<body>
+    redirecting to <a href="{{ url }}">BUSY HUMANS</a>...
+</body>
+</html>

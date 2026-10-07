@@ -1,15 +1,12 @@
-# Deploys busyhumans to the woizikube cluster as the helm release busyhumans
-# (chart: .pipeline/helm/busyhumans).
-#
-# The pipeline does not build the image: the Dockerfile copies src/out/ROOT.war,
-# which is built in the IDE and is not part of this repository. Build and push
-# <registry>/busyhumans:<version> by hand, then set that version as appVersion
-# in .pipeline/helm/busyhumans/Chart.yaml.
+# Builds the image of busyhumans and deploys it to the woizikube cluster as the
+# helm release busyhumans (chart: .pipeline/helm/busyhumans).
 #
 # The settings of the cluster for this project (namespace, registry, hosts,
 # volumes, secrets) are not part of this repository, see .pipeline/deploy.sh.
 # Before the first run:
 #   - woizikube: run "woizikube.sh prepare busyhumans"
+#   - woizikube: copy the data to /volume1/woizikube-versioned/busyhumans
+#   - Woodpecker: add the secret WOIZIKUBE_REGISTRY, the registry that the image is pushed to
 
 when:
   - event: [push, manual]
@@ -25,11 +22,36 @@ clone:
       recursive: false
 
 steps:
+  - name: test
+    image: python:3.14-slim
+    pull: true
+    commands:
+      - pip install --no-cache-dir uv
+      - uv sync --frozen
+      - DEBUG=1 uv run python manage.py test mastery
+
+  - name: publish-image
+    image: woodpeckerci/plugin-kaniko
+    pull: true
+    depends_on:
+      - test
+    settings:
+      registry:
+        from_secret: WOIZIKUBE_REGISTRY
+      repo: busyhumans
+      tags: ${CI_COMMIT_SHA}
+      dockerfile: Dockerfile
+      context: .
+      insecure: true
+
   - name: deploy
     image: alpine/helm:3.17.3
     pull: true
+    depends_on:
+      - publish-image
     environment:
       RELEASE_NAME: busyhumans
+      IMAGE_TAG: ${CI_COMMIT_SHA}
     commands:
       - apk add --no-cache kubectl
       - sh .pipeline/deploy.sh

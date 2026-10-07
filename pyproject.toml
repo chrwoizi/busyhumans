@@ -1,0 +1,15 @@
+[project]
+name = "busyhumans"
+version = "2.0.0"
+description = "Busy Humans: learn and share real life skills"
+requires-python = ">=3.14"
+dependencies = [
+    "django>=5.2,<5.3",
+    "argon2-cffi>=23.1",
+    "pillow>=11",
+    "whitenoise>=6.7",
+    "gunicorn>=23",
+]
+
+[tool.uv]
+package = false

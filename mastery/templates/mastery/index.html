@@ -1,0 +1,24 @@
+{% load static %}<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta property="og:description" content="The place where you can share ideas and activities.">
+    <meta property="og:image" content="{{ base_url }}static/icon.png">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <title>BUSY HUMANS</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'mastery/base.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'mastery/components.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'mastery/app.css' %}">
+    <link href="{% static 'favicon.png' %}" rel="icon" type="image/png">
+    <script src="{% static 'mastery/app.js' %}" defer></script>
+</head>
+<body id="mastery-body-main" data-status="{{ status }}" data-login="{{ enable_login|yesno:'true,false' }}" data-admin="{{ viewer.is_admin|yesno:'true,false' }}" data-person="{{ viewer.person_id|default:'' }}">
+<noscript>
+    <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+        Your web browser must have JavaScript enabled
+        in order for this application to display correctly.
+    </div>
+</noscript>
+<div class="MainV-middle"><div class="Topbar-outer"><div class="Topbar-inner"> <img class="Topbar-logo" id="logo" alt="" src="/static/topbar-logo.png"> <a class="topbar-anchor Topbar-menuItem" data-menu="about" href="#about"><span class="Topbar-menuItemText">About</span></a> <a class="topbar-anchor Topbar-menuItem" data-menu="discover" href="#discover"><span class="Topbar-menuItemText">Challenges</span></a> {% if enable_login %}<a class="topbar-anchor Topbar-menuItem" data-menu="create" href="#create"><span class="Topbar-menuItemText">Create</span></a>{% endif %} {% if viewer.is_admin %}<a class="topbar-anchor Topbar-menuItem" data-menu="admin" href="#admin"><span class="Topbar-menuItemText">Admin</span></a>{% endif %} {% if enable_login %}{% include "mastery/components/account_menu.html" %}{% else %}<div class="Topbar-right">Login is disabled</div>{% endif %} </div></div> <div class="floatLeft PageContainer-outer" id="page"><div class="LoadingP-page">Loading...</div></div> <div class="floatRight SideBar-outer"><div class="SideBar-inner SideBar-bottomBorder" id="announcements" style="display: none;"><div><div class="AnnouncementsV-caption">Announcement:</div> <div id="announcement"></div></div></div> {% if enable_search %}<div class="SideBar-inner"><div><div class="SearchV-caption">Search:</div> <input type="text" class="SearchV-search" id="search" autocomplete="off"> <div id="search-results"></div> <div class="floatRight SearchV-hasMore" id="search-more" style="display: none;">and more...</div> <div class="stopFloat"></div></div></div>{% endif %} <div id="sidebar">{% include "mastery/sidebar/content.html" %}</div></div> <div class="stopFloat Bottom-outer"><div class="floatRight Bottom-link"><a href="#imprint">Imprint</a></div> <div class="floatRight Bottom-link"><a href="#legal">Terms of Usage</a></div></div></div>
+</body>
+</html>

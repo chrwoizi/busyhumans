@@ -1,0 +1,110 @@
+/* What the old client did with scripts and is plain CSS now, and styles of parts that are new. */
+
+/* The page is at least as high as the window */
+.PageContainer-outer {
+    min-height: calc(100vh - 119px);
+}
+
+.LoadingP-page {
+    color: #888;
+}
+
+/* Highlight of an entry under the mouse */
+.AssignmentOverviewV-mouseOverEffect,
+.RankingV-mouseOverEffect,
+.AssignmentSearchResultV-mouseOverEffect,
+.PersonSearchResultV-mouseOverEffect,
+.SkillSearchResultV-mouseOverEffect,
+.ExistingSkillV-mouseOverEffect,
+.SmallPictureV-mouseOverEffect {
+    display: none;
+    pointer-events: none;
+}
+a:hover > div > .AssignmentOverviewV-mouseOverEffect,
+a:hover > div > .RankingV-mouseOverEffect,
+a:hover > div > .AssignmentSearchResultV-mouseOverEffect,
+a:hover > div > .PersonSearchResultV-mouseOverEffect,
+a:hover > div > .SkillSearchResultV-mouseOverEffect,
+.selectable:hover > .ExistingSkillV-mouseOverEffect,
+.SmallPictureV-outer:hover .SmallPictureV-mouseOverEffect {
+    display: block;
+}
+
+/* Buttons that stay pressed show one of two faces */
+.toggleButton-up .face-down,
+.toggleButton-down .face-up {
+    display: none;
+}
+.toggleButton-up:hover {
+    background-color: #F0F0F0;
+}
+.toggleButton-down:hover {
+    background-color: #E8E8E8;
+}
+.toggleButton,
+.button[role="button"] {
+    user-select: none;
+}
+.button[role="button"]:hover {
+    background-color: #F0F0F0;
+}
+.topbar-togglebutton:hover .AccountMenu-login {
+    text-shadow: 0 0 1px #FFFFFF, 0 0 2px #FFFFFF, 0 0 4px #FFFFFF;
+}
+
+/* Pictures */
+.PictureV-image {
+    display: block;
+}
+.picture-native {
+    width: fit-content;
+}
+.PictureV-licenseButton {
+    display: none;
+}
+.picture-licensed:hover .PictureV-licenseButton {
+    display: block;
+}
+.license-popup {
+    position: absolute;
+    z-index: 2000;
+}
+
+/* The last achievement of a list has no line below it */
+.lazy-container > .achievement:last-child .AchievementV-separator {
+    display: none;
+}
+.achievement.collapsed .AchievementV-expanded {
+    display: none;
+}
+
+/* Forms that the old client did not have */
+.auth-form {
+    font-size: 10pt;
+}
+.auth-form td,
+.auth-form div,
+.auth-form a {
+    font-size: 10pt;
+}
+.auth-message {
+    margin: 10px 0;
+    font-size: 10pt;
+}
+.LoginDropdown-forgot {
+    display: block;
+    margin-top: 6px;
+    color: #FFF;
+    text-align: center;
+}
+.honeypot {
+    position: absolute;
+    left: -10000px;
+}
+.upload-status {
+    padding: 5px 0 0 6px;
+    color: #888;
+}
+.upload input[type="file"] {
+    display: none;
+}

@@ -1,0 +1,1 @@
+<div>{% if not skill %}<div>The requested category does not exist.</div>{% else %}<div><div>{% include "mastery/components/skill.html" %}</div> <div class="SkillP-assignments"><div class="SkillP-assignmentsHeader">Assignments:</div> <br> {% include "mastery/components/lazy_list.html" with url=list_url indented="SkillP-indented" %}</div></div>{% endif %}</div>
