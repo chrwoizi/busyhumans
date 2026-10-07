@@ -2,8 +2,6 @@
 .venv
 data
 deploy
-src
-solr_home
 art
 concept
 **/__pycache__

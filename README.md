@@ -31,7 +31,6 @@ The data is in `data/` (set `DATA_DIR` for another place). Tests: `DEBUG=1 uv ru
 | `mastery/templates/`, `mastery/static/` | Pages, styles and the client script |
 | `mastery/legacy/` | Import of the old MongoDB database |
 | `.pipeline/`, `Dockerfile`, `.woodpecker.yaml` | Image, chart and pipeline |
-| `src/`, `solr_home/` | The old application (GWT, Scala, MongoDB, Solr). No longer used. |
 
 The pages are rendered on the server. `mastery/static/mastery/app.js` puts the page for the part of the address after the `#` into the frame, so links like `#assignment=<id>` work as they always did.
 

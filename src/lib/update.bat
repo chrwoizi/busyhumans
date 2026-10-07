@@ -1,1 +1,0 @@
-copy ..\..\..\..\MongoPA\out\mongopa.jar .\mongopa.jar
