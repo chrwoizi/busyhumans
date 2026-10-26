@@ -37,4 +37,30 @@ if [ -n "${IMAGE_TAG:-}" ]; then
     set -- "$@" --set-string "image.tag=$IMAGE_TAG"
 fi
 
+report_runtime_versions() {
+    label=$1
+    echo "=== $label ==="
+    kubectl version --output=yaml
+
+    pod=$(kubectl get pods --namespace "$namespace" \
+        --selector="app.kubernetes.io/instance=$release" \
+        --field-selector=status.phase=Running \
+        -o jsonpath='{.items[0].metadata.name}')
+    if [ -z "$pod" ]; then
+        echo "No running pod found for $release in $namespace."
+        return 0
+    fi
+
+    kubectl exec --namespace "$namespace" "$pod" -- python -c \
+        'import importlib.metadata as m, sys; print("Python==" + sys.version.split()[0]); print("\n".join(sorted(d.metadata["Name"] + "==" + d.version for d in m.distributions() if d.metadata.get("Name"))))'
+}
+
+if [ "${REPORT_RUNTIME_VERSIONS:-}" = "1" ]; then
+    report_runtime_versions "busyhumans runtime before deployment"
+fi
+
 helm upgrade "$release" "$chart" --install --wait --timeout 10m "$@"
+
+if [ "${REPORT_RUNTIME_VERSIONS:-}" = "1" ]; then
+    report_runtime_versions "busyhumans runtime after deployment"
+fi

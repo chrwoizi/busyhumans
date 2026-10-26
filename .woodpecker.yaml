@@ -23,7 +23,7 @@ clone:
 
 steps:
   - name: test
-    image: python:3.14-slim
+    image: python:3.14.9-slim
     pull: true
     commands:
       - pip install --no-cache-dir uv
