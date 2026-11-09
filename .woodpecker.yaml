@@ -54,7 +54,12 @@ steps:
       IMAGE_TAG: ${CI_COMMIT_SHA}
       REPORT_RUNTIME_VERSIONS: "1"
     commands:
-      - apk add --no-cache kubectl
+      - apk add --no-cache ca-certificates curl
+      - curl -fsSL https://dl.k8s.io/release/v1.26.15/bin/linux/amd64/kubectl -o /tmp/kubectl
+      - curl -fsSL https://dl.k8s.io/release/v1.26.15/bin/linux/amd64/kubectl.sha256 -o /tmp/kubectl.sha256
+      - echo "$(cat /tmp/kubectl.sha256)  /tmp/kubectl" | sha256sum -c -
+      - mv /tmp/kubectl /usr/local/bin/kubectl
+      - chmod +x /usr/local/bin/kubectl
       - sh .pipeline/deploy.sh
     backend_options:
       kubernetes:
