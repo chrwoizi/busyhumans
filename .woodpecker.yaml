@@ -23,7 +23,7 @@ clone:
 
 steps:
   - name: test
-    image: python:3.14.9-slim
+    image: python:3.15.2-slim-trixie
     pull: true
     commands:
       - pip install --no-cache-dir uv
@@ -52,6 +52,7 @@ steps:
     environment:
       RELEASE_NAME: busyhumans
       IMAGE_TAG: ${CI_COMMIT_SHA}
+      REPORT_RUNTIME_VERSIONS: "1"
     commands:
       - apk add --no-cache kubectl
       - sh .pipeline/deploy.sh

@@ -51,6 +51,9 @@ report_runtime_versions() {
         return 0
     fi
 
+    kubectl get pod "$pod" --namespace "$namespace" \
+        -o 'go-template={{range .spec.containers}}{{.image}}{{"\n"}}{{end}}'
+    kubectl exec --namespace "$namespace" "$pod" -- cat /etc/os-release
     kubectl exec --namespace "$namespace" "$pod" -- python -c \
         'import importlib.metadata as m, sys; print("Python==" + sys.version.split()[0]); print("\n".join(sorted(d.metadata["Name"] + "==" + d.version for d in m.distributions() if d.metadata.get("Name"))))'
 }
